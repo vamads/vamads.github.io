@@ -1,0 +1,39 @@
+/* Set the background to white and text to black */
+body {
+    font-family: Arial, sans-serif;
+    background-color: white; /* White background */
+    color: black; /* Black text */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Olive green accents for headers */
+h1, h2 {
+    color: #808000; /* Olive green */
+}
+
+/* Tab buttons */
+.tab-button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1; /* Light background for inactive tabs */
+    border: 1px solid #ccc;
+    flex: 1;
+    text-align: center;
+    color: black; /* Black text */
+}
+
+/* Active tab has olive green background */
+.active-tab {
+    background-color: #808000; /* Olive green for active tab */
+    color: white; /* White text on active tab */
+}
+
+/* Tab content background */
+.tab-content {
+    background-color: white; /* White background for content */
+    color: black; /* Black text */
+    padding: 20px;
+    border: 1px solid #ccc;
+}
