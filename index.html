@@ -105,6 +105,15 @@
         <div id="research-content">
             <!-- Research articles will be loaded here -->
         </div>
+
+        <!-- Image Carousel for Research Photos -->
+        <div class="carousel-container">
+            <img id="carousel-img" class="carousel-image" src="" alt="Gallery Image">
+            <div class="caption" id="carousel-caption"></div>
+            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+            <a class="next" onclick="changeSlide(1)">&#10095;</a>
+        </div>
+    </div>
     </div>
 
 
@@ -178,6 +187,46 @@
             galleryItem.appendChild(caption);
             galleryDiv.appendChild(galleryItem);
         });
+
+        // List of image filenames in the 'gallery' folder
+        const images = [
+            { src: 'images/gallery/test2.heic', caption: 'Presented_my_poster_on_author_name_disambiguation_algorithm_using_a_similarity_learning_framework_at_the_2024_International_Conference_on_the_Science_of_Science_and_Innovation' },
+            { src: 'images/conference2.jpg', caption: 'Mentorship event' },
+            { src: 'images/conference3.jpg', caption: 'Speaking at XYZ event' },
+            { src: 'images/conference4.jpg', caption: 'Research collaboration' }
+        ];
+
+        let currentIndex = 0;
+
+        // Function to load image and caption
+        function showSlide(index) {
+            const imageElement = document.getElementById('carousel-img');
+            const captionElement = document.getElementById('carousel-caption');
+
+            // Ensure index is within bounds
+            if (index >= images.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = images.length - 1;
+            } else {
+                currentIndex = index;
+            }
+
+            // Set image and caption
+            imageElement.src = images[currentIndex].src;
+            captionElement.innerHTML = images[currentIndex].caption;
+
+            // Make image visible
+            imageElement.classList.add('active');
+        }
+
+        // Function to change slide
+        function changeSlide(step) {
+            showSlide(currentIndex + step);
+        }
+
+        // Initialize first slide
+        showSlide(0);
 
         }
     
