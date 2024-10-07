@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Research Website</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Tab styling */
+        .tab {
+            display: flex;
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f1f1f1;
+            border: 1px solid #ccc;
+            width: 100%;
+            justify-content: space-around;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            border-top: none;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        .active-tab {
+            background-color: #ccc;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to My Research Site</h1>
+
+    <!-- Tab Navigation -->
+    <div class="tab">
+        <div class="tab-button active-tab" onclick="openTab('about')">About Me</div>
+        <div class="tab-button" onclick="openTab('cv')">CV</div>
+        <div class="tab-button" onclick="openTab('research')">Research</div>
+    </div>
+
+    <!-- Tab Content -->
+    <div id="about" class="tab-content show">
+        <h2>About Me</h2>
+        <p>I'm a PhD candidate at Michigan State University focusing on AI methods and author name disambiguation.</p>
+    </div>
+
+    <div id="cv" class="tab-content">
+        <h2>Curriculum Vitae</h2>
+        <p>Here is my CV. [You can link a PDF or text version here]</p>
+    </div>
+
+    <div id="research" class="tab-content">
+        <h2>My Research</h2>
+        <p>I work on AI methods to connect researchers through networks. My projects include author name disambiguation and peer review recommender systems.</p>
+    </div>
+
+    <script>
+        function openTab(tabName) {
+            var i, tabcontent, tablinks;
+            
+            // Hide all tab content
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("show");
+            }
+            
+            // Remove active-tab class from all tab buttons
+            tablinks = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active-tab");
+            }
+
+            // Show the current tab and add active-tab class
+            document.getElementById(tabName).classList.add("show");
+            event.currentTarget.classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>
