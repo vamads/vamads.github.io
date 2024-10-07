@@ -5,6 +5,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vicente Amado Olivo</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* Basic styles for the layout */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .banner {
+            background-color: #007A33; /* MSU green */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .tab {
+            display: flex;
+            justify-content: center;
+            background-color: #f1f1f1;
+        }
+
+        .tab-button {
+            padding: 14px 20px;
+            cursor: pointer;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+
+        .tab-button:hover {
+            background-color: #ddd;
+        }
+
+        .active-tab {
+            background-color: #ccc;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.show {
+            display: block;
+        }
+
+        .carousel-container {
+            position: relative;
+            margin: auto;
+            width: 50%; /* Adjust as necessary */
+        }
+
+        .carousel-image {
+            width: 100%;
+            height: auto;
+        }
+
+        .caption {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 24px;
+            padding: 8px;
+            background-color: rgba(0, 0, 0, 0.5);
+            border: none;
+            border-radius: 3px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+    </style>
 </head>
 <body>
 
@@ -24,46 +107,40 @@
         <div class="tab-button" onclick="openTab(event, 'research')">Research</div>
     </div>
 
-        <!-- Tab Content -->
+    <!-- Tab Content -->
     <div id="about" class="tab-content show">
         <h1>About Me</h1>
-    
         <p>I'm a PhD candidate at Michigan State University in the Computational Mathematics, Science, and Engineering Department, specializing in computational metascience. My research focuses on developing AI methods to connect global researchers through a comprehensive network, aiming to unify the worldwide research enterprise.</p>
-    
+
         <h2>Research Projects</h2>
-    
         <p>I work on various projects to connect global researchers, including:</p>
-    
         <ol>
             <li>Author name disambiguation algorithms</li>
             <li>Studying career trajectories of PhD graduates</li>
             <li>Tracking facility usage through machine learning techniques</li>
         </ol>
-    
+
         <h2>Research Interests</h2>
-    
         <p>My interests lie in understanding the collaboration dynamics of researchers across the world and identifying ways to assist researchers using data science. I believe that accurate disambiguation has far-reaching impacts:</p>
-    
         <ul>
             <li>Facilitating collaborations</li>
             <li>Identifying emerging experts for conferences</li>
             <li>Connecting researchers from under-resourced areas</li>
         </ul>
-    
+
         <p>Ultimately, my goal is to contribute to a more interconnected and equitable worldwide research ecosystem.</p>
-    
+
         <h2>Life Beyond Research</h2>
-    
         <p>When I'm not immersed in my research, I enjoy:</p>
-    
-            <!-- Sports Section -->
+
+        <!-- Sports Section -->
         <h3>Sports</h3>
         <ul>
             <li>Playing and watching soccer</li>
             <li>Participating in fantasy football leagues</li>
             <li>Running: I recently took up long-distance running and completed my first half marathon in 2024</li>
         </ul>
-    
+
         <!-- Add GIF or Video for Sports -->
         <div class="hobby-photo">
             <video class="hobby-video" controls>
@@ -71,7 +148,7 @@
                 Your browser does not support the video tag.
             </video>
         </div>
-    
+
         <!-- Culinary Section -->
         <h3>Culinary Exploration</h3>
         <p>I have a passion for cooking, particularly dishes from:</p>
@@ -80,16 +157,14 @@
             <li>Italy</li>
             <li>Venezuela</li>
         </ul>
-    
+
         <!-- Add Photos for Culinary Exploration -->
         <div class="hobby-photo">
             <img src="images/cooking1.jpeg" alt="Cooking Dish 1" class="hobby-image">
             <img src="images/cooking2.JPG" alt="Cooking Dish 2" class="hobby-image">
         </div>
-         <p>This culinary interest reflects my diverse background and allows me to stay connected with my roots while exploring new flavors and techniques.</p>
+        <p>This culinary interest reflects my diverse background and allows me to stay connected with my roots while exploring new flavors and techniques.</p>
     </div>
-
-
 
     <div id="cv" class="tab-content">
         <h2>Curriculum Vitae</h2>
@@ -114,43 +189,42 @@
             <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
     </div>
-    </div>
-
 
     <script>
         function openTab(event, tabName) {
             var i, tabcontent, tablinks;
-    
+
             // Hide all tab content
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
                 tabcontent[i].style.display = "none";
             }
-    
+
             // Remove active-tab class from all tab buttons
             tablinks = document.getElementsByClassName("tab-button");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active-tab");
             }
-    
+
             // Show the selected tab and add active class
             document.getElementById(tabName).style.display = "block";
             event.currentTarget.classList.add("active-tab");
-    
+
             // Load external HTML for the research tab
             if (tabName === 'research') {
                 loadResearchArticles();
+                showSlide(0); // Show the first slide of the carousel when the tab is opened
             }
         }
-    
+
         // Function to load external research articles
         function loadResearchArticles() {
             const researchContent = document.getElementById('research-content');
             researchContent.innerHTML = ''; // Clear previous content
-    
+
             // List of external research article files
             const articles = ['research1.html', 'research2.html', 'research3.html']; // Add more articles as needed
-    
+
             // Load each article and append it to the research content div
             articles.forEach(function (article) {
                 fetch(article)
@@ -162,77 +236,64 @@
                     })
                     .catch(error => console.error('Error loading research article:', error));
             });
-    
-            
-        const galleryDiv = document.getElementById('gallery');
-        const imageFolder = 'images/gallery/';
-        const images = ['Comprehensive_Examination_I_became_A_PhD_Candidate.JPG', 'Presented my poster on author name disambiguation algorithm using a similarity learning framework at the 2024 International Conference on the Science of Science and Innovation .HEIC]; // Add your image file names here
-    
-        images.forEach((image) => {
-            const galleryItem = document.createElement('div');
-            galleryItem.classList.add('gallery-item');
-    
-            const imgElement = document.createElement('img');
-            imgElement.src = imageFolder + image;
-            imgElement.alt = image;
-    
-            // Automatically generate caption by removing file extension and replacing underscores with spaces
-            const captionText = image.split('.')[0].replace(/_/g, ' ');
-    
-            const caption = document.createElement('p');
-            caption.classList.add('gallery-caption');
-            caption.innerText = captionText;
-    
-            galleryItem.appendChild(imgElement);
-            galleryItem.appendChild(caption);
-            galleryDiv.appendChild(galleryItem);
-        });
 
-        // List of image filenames in the 'gallery' folder
+            // Populate the gallery with images
+            const galleryDiv = document.getElementById('gallery');
+            const imageFolder = 'images/gallery/';
+            const images = [
+                'Comprehensive_Examination_I_became_A_PhD_Candidate.JPG',
+                'Presented_my_poster_on_author_name_disambiguation_algorithm_using_a_similarity_learning_framework_at_the_2024_International_Conference_on_the_Science_of_Science_and_Innovation.HEIC',
+                'test2.heic',
+                'conference2.jpg',
+                'conference3.jpg',
+                'conference4.jpg'
+            ]; // Add your image file names here
+
+            images.forEach((image, index) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.classList.add('gallery-item');
+
+                const img = document.createElement('img');
+                img.src = imageFolder + image;
+                img.alt = 'Research Image ' + (index + 1);
+                img.onclick = function () { showSlide(index); }; // Show the clicked image in the carousel
+
+                galleryItem.appendChild(img);
+                galleryDiv.appendChild(galleryItem);
+            });
+        }
+
+        // Carousel functionality
+        let currentSlideIndex = 0;
         const images = [
-            { src: 'images/gallery/test2.heic', caption: 'Presented_my_poster_on_author_name_disambiguation_algorithm_using_a_similarity_learning_framework_at_the_2024_International_Conference_on_the_Science_of_Science_and_Innovation' },
-            { src: 'images/conference2.jpg', caption: 'Mentorship event' },
-            { src: 'images/conference3.jpg', caption: 'Speaking at XYZ event' },
-            { src: 'images/conference4.jpg', caption: 'Research collaboration' }
+            'images/gallery/Comprehensive_Examination_I_became_A_PhD_Candidate.JPG',
+            'images/gallery/Presented_my_poster_on_author_name_disambiguation_algorithm_using_a_similarity_learning_framework_at_the_2024_International_Conference_on_the_Science_of_Science_and_Innovation.HEIC',
+            'images/gallery/test2.heic',
+            'images/gallery/conference2.jpg',
+            'images/gallery/conference3.jpg',
+            'images/gallery/conference4.jpg'
         ];
 
-        let currentIndex = 0;
-
-        // Function to load image and caption
         function showSlide(index) {
-            const imageElement = document.getElementById('carousel-img');
-            const captionElement = document.getElementById('carousel-caption');
-
-            // Ensure index is within bounds
             if (index >= images.length) {
-                currentIndex = 0;
+                currentSlideIndex = 0; // Loop back to the first slide
             } else if (index < 0) {
-                currentIndex = images.length - 1;
+                currentSlideIndex = images.length - 1; // Loop to the last slide
             } else {
-                currentIndex = index;
+                currentSlideIndex = index;
             }
 
-            // Set image and caption
-            imageElement.src = images[currentIndex].src;
-            captionElement.innerHTML = images[currentIndex].caption;
-
-            // Make image visible
-            imageElement.classList.add('active');
+            const carouselImg = document.getElementById('carousel-img');
+            const caption = document.getElementById('carousel-caption');
+            carouselImg.src = images[currentSlideIndex];
+            caption.innerText = `Research Image ${currentSlideIndex + 1} of ${images.length}`;
         }
 
-        // Function to change slide
-        function changeSlide(step) {
-            showSlide(currentIndex + step);
+        function changeSlide(direction) {
+            showSlide(currentSlideIndex + direction);
         }
-
-        // Initialize first slide
-        showSlide(0);
-
-        }
-    
-        // Default tab on load
-        document.getElementById("about").style.display = "block";
     </script>
+
 </body>
 </html>
-    
+
