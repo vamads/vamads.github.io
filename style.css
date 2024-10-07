@@ -8,6 +8,19 @@ body {
     line-height: 1.6;
 }
 
+/* Style for profile photo */
+.profile-photo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.photo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Makes it a circle */
+    border: 3px solid #808000; /* Olive green border */
+}
+
 /* Olive green accents for headers */
 h1, h2 {
     color: #808000; /* Olive green */
