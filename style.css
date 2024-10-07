@@ -8,22 +8,9 @@ body {
     line-height: 1.6;
 }
 
-/* Style for profile photo */
-.profile-photo {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.photo {
-    width: 150px; /* Adjust size as needed */
-    height: auto;
-    border-radius: 50%; /* Makes it a circle */
-    border: 3px solid #808000; /* Olive green border */
-}
-
-/* Olive green accents for headers */
+/* Michigan State University green accents for headers */
 h1, h2 {
-    color: #808000; /* Olive green */
+    color: #18453B; /* MSU Green */
 }
 
 /* Tab buttons */
@@ -37,9 +24,9 @@ h1, h2 {
     color: black; /* Black text */
 }
 
-/* Active tab has olive green background */
+/* Active tab with MSU green background */
 .active-tab {
-    background-color: #808000; /* Olive green for active tab */
+    background-color: #18453B; /* MSU green for active tab */
     color: white; /* White text on active tab */
 }
 
@@ -50,3 +37,17 @@ h1, h2 {
     padding: 20px;
     border: 1px solid #ccc;
 }
+
+/* Style for profile photo */
+.profile-photo {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.photo {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Makes it a circle */
+    border: 3px solid #18453B; /* MSU green border */
+}
+
