@@ -68,26 +68,25 @@
             }
         }
 
-        // Function to load external research articles
         function loadResearchArticles() {
-            const researchContent = document.getElementById('research-content');
-            researchContent.innerHTML = ''; // Clear previous content
-
-            // List of external research article files
-            const articles = ['research1.html', 'research2.html']; // Add more articles as needed
-
-            // Load each article and append it to the research content div
-            articles.forEach(function (article) {
-                fetch(article)
-                    .then(response => response.text())
-                    .then(data => {
-                        const articleDiv = document.createElement('div');
-                        articleDiv.innerHTML = data;
-                        researchContent.appendChild(articleDiv);
-                    })
-                    .catch(error => console.error('Error loading research article:', error));
-            });
-        }
+        const researchContent = document.getElementById('research-content');
+        researchContent.innerHTML = ''; // Clear previous content
+    
+        // List of external research article files
+        const articles = ['research/research1.html', 'research/research2.html', 'research/research3.html']; // Add more articles as needed
+    
+        // Load each article and append it to the research content div
+        articles.forEach(function (article) {
+            fetch(article)
+                .then(response => response.text())
+                .then(data => {
+                    const articleDiv = document.createElement('div');
+                    articleDiv.innerHTML = data;
+                    researchContent.appendChild(articleDiv);
+                })
+                .catch(error => console.error('Error loading research article:', error));
+        });
+    }
 
         // Default tab on load
         document.getElementById("about").style.display = "block";
