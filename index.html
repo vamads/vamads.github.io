@@ -98,18 +98,10 @@
 
     <div id="research" class="tab-content">
         <h2>My Research</h2>
-        <div id="research-content">
-            <!-- Research articles will be loaded here -->
-        </div>
-    </div>
-
-        <div id="cv" class="tab-content">
-        <h2>Curriculum Vitae</h2>
-        <p>You can download my CV <a href="documents/CV.pdf" target="_blank">here</a>.</p>
-    </div>
-
-    <div id="research" class="tab-content">
-        <h2>My Research</h2>
+    
+        <!-- Empty div for dynamic gallery -->
+        <div id="gallery" class="gallery"></div>
+    
         <div id="research-content">
             <!-- Research articles will be loaded here -->
         </div>
@@ -160,6 +152,27 @@
                         researchContent.appendChild(articleDiv);
                     })
                     .catch(error => console.error('Error loading research article:', error));
+            });
+    
+            const galleryDiv = document.getElementById('gallery');
+            const imageFolder = 'images/gallery/';
+            const images = ['conference1.jpg', 'conference2.jpg', 'mentee1.jpg', 'mentee2.jpg']; // Add image file names here
+        
+            images.forEach((image) => {
+                const galleryItem = document.createElement('div');
+                galleryItem.classList.add('gallery-item');
+        
+                const imgElement = document.createElement('img');
+                imgElement.src = imageFolder + image;
+                imgElement.alt = image;
+        
+                const caption = document.createElement('p');
+                caption.classList.add('gallery-caption');
+                caption.innerText = image.split('.')[0].replace(/_/g, ' '); // Optional: Create caption from file name
+        
+                galleryItem.appendChild(imgElement);
+                galleryItem.appendChild(caption);
+                galleryDiv.appendChild(galleryItem);
             });
         }
     
