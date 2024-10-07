@@ -95,3 +95,38 @@ h1, h2 {
     border: 1px solid #ccc; /* Optional: Add a border around the video */
     border-radius: 5px; /* Optional: Round the corners of the video */
 }
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.gallery-item {
+    width: 48%; /* Adjust the width of each gallery item */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-caption {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Adjust gallery layout for smaller screens */
+@media (max-width: 768px) {
+    .gallery-item {
+        width: 100%; /* Make the gallery items full width on smaller screens */
+    }
+}
+
