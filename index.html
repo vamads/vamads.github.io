@@ -17,9 +17,9 @@
     
     <!-- Tab Navigation -->
     <div class="tab">
-        <div class="tab-button active-tab" onclick="openTab('about')">About Me</div>
-        <div class="tab-button" onclick="openTab('cv')">CV</div>
-        <div class="tab-button" onclick="openTab('research')">Research</div>
+        <div class="tab-button active-tab" onclick="openTab(event, 'about')">About Me</div>
+        <div class="tab-button" onclick="openTab(event, 'cv')">CV</div>
+        <div class="tab-button" onclick="openTab(event, 'research')">Research</div>
     </div>
 
     <!-- Tab Content -->
@@ -30,7 +30,7 @@
 
     <div id="cv" class="tab-content">
         <h2>Curriculum Vitae</h2>
-        <p>You can download my CV <a href="documents/Vicente_Amado_Olivo_Resume.pdf" target="_blank">here</a>.</p>
+        <p>You can download my CV <a href="documents/CV.pdf" target="_blank">here</a>.</p>
     </div>
 
     <div id="research" class="tab-content">
@@ -39,25 +39,29 @@
     </div>
 
     <script>
-        function openTab(tabName) {
+        function openTab(event, tabName) {
             var i, tabcontent, tablinks;
-            
+
             // Hide all tab content
             tabcontent = document.getElementsByClassName("tab-content");
             for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].classList.remove("show");
+                tabcontent[i].style.display = "none";
             }
-            
+
             // Remove active-tab class from all tab buttons
             tablinks = document.getElementsByClassName("tab-button");
             for (i = 0; i < tablinks.length; i++) {
                 tablinks[i].classList.remove("active-tab");
             }
 
-            // Show the current tab and add active-tab class
-            document.getElementById(tabName).classList.add("show");
+            // Show the selected tab and add active class
+            document.getElementById(tabName).style.display = "block";
             event.currentTarget.classList.add("active-tab");
         }
+
+        // Default tab on load
+        document.getElementById("about").style.display = "block";
     </script>
+
 </body>
 </html>
