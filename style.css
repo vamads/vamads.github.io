@@ -8,7 +8,23 @@ body {
     line-height: 1.6;
 }
 
-/* Michigan State University green accents for headers */
+/* Michigan State University green banner */
+.banner {
+    width: 100%;
+    background-color: #18453B; /* MSU Green */
+    padding: 40px 0;
+    text-align: center;
+}
+
+/* Make the profile picture larger */
+.photo {
+    width: 200px; /* Adjust the size to make the image larger */
+    height: auto;
+    border-radius: 50%; /* Circular shape */
+    border: 5px solid white; /* White border around the image */
+}
+
+/* Headings with MSU green */
 h1, h2 {
     color: #18453B; /* MSU Green */
 }
@@ -26,28 +42,22 @@ h1, h2 {
 
 /* Active tab with MSU green background */
 .active-tab {
-    background-color: #18453B; /* MSU green for active tab */
+    background-color: #18453B; /* MSU Green for active tab */
     color: white; /* White text on active tab */
 }
 
-/* Tab content background */
+/* Tab content */
 .tab-content {
-    background-color: white; /* White background for content */
-    color: black; /* Black text */
+    background-color: white;
+    color: black;
     padding: 20px;
     border: 1px solid #ccc;
+    display: none; /* Hide by default */
 }
 
-/* Style for profile photo */
-.profile-photo {
-    text-align: center;
-    margin-top: 20px;
+/* Show class to display the active tab */
+.tab-content.show {
+    display: block; /* Only display the selected tab */
 }
 
-.photo {
-    width: 150px; /* Adjust size as needed */
-    height: auto;
-    border-radius: 50%; /* Makes it a circle */
-    border: 3px solid #18453B; /* MSU green border */
-}
 
