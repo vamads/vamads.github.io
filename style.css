@@ -77,12 +77,21 @@ h1, h2 {
 }
 
 .hobby-photo {
-    margin: 20px 0; /* Add space around the images */
-    text-align: center; /* Center the image and caption */
+    margin: 20px 0;
+    text-align: center;
 }
 
 .hobby-image {
-    width: 100%; /* Make the image responsive */
-    max-width: 400px; /* Limit maximum size */
+    width: 45%; /* Set the width of the images */
+    margin: 10px; /* Add space between images */
+    max-width: 300px; /* Limit maximum size */
+    height: auto;
+}
+
+.hobby-video {
+    width: 100%; /* Full width for video */
+    max-width: 600px; /* Limit maximum size */
     height: auto; /* Maintain aspect ratio */
+    border: 1px solid #ccc; /* Optional: Add a border around the video */
+    border-radius: 5px; /* Optional: Round the corners of the video */
 }
