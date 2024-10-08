@@ -100,3 +100,11 @@ h1, h2 {
     color: #555;
 }
 
+.hobby-photo img {
+    max-width: 200px; /* Maximum width for hobby images */
+    width: 100%; /* Make the images responsive */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #ccc; /* Optional: border styling */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
