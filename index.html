@@ -5,116 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vicente Amado Olivo</title>
     <link rel="stylesheet" href="style.css">
-    <style>
-        /* Basic styles for the layout */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-
-        .banner {
-            background-color: #18453B; /* MSU green */
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .tab {
-            display: flex;
-            justify-content: center;
-            background-color: #f1f1f1;
-        }
-
-        .tab-button {
-            padding: 14px 20px;
-            cursor: pointer;
-            border: none;
-            outline: none;
-            transition: background-color 0.3s;
-        }
-
-        .tab-button:hover {
-            background-color: #ddd;
-        }
-
-        .active-tab {
-            background-color: #ccc;
-        }
-
-        .tab-content {
-            display: none;
-            padding: 20px;
-        }
-
-        .tab-content.show {
-            display: block;
-        }
-
-        .carousel-container {
-            position: relative;
-            margin: auto;
-            width: 50%; /* Adjust as necessary */
-        }
-
-        .carousel-image {
-            width: 100%;
-            height: auto;
-        }
-
-        .caption {
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        .prev, .next {
-            cursor: pointer;
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            color: white;
-            font-size: 24px;
-            padding: 8px;
-            background-color: rgba(0, 0, 0, 0.5);
-            border: none;
-            border-radius: 3px;
-        }
-
-        .prev {
-            left: 10px;
-        }
-
-        .next {
-            right: 10px;
-        }
-    </style>
 </head>
 <body>
 
-<style>
-    /* Profile image styles */
-    .profile-box {
-        float: right; /* Move the image to the right of the text */
-        margin: 10px; /* Add some space around the image */
-        border: 3px solid #18453B; /* MSU green border around the image */
-        padding: 5px; /* Padding between image and border */
-        max-width: 150px; /* Set a maximum width for the image */
-    }
-
-    .profile-photo {
-        width: 100%; /* Make the image take full width of the container */
-        height: auto; /* Maintain aspect ratio */
-        border-radius: 50%; /* Make the image round */
-    }
-</style>
-
-<!-- Image inside the text -->
-<div class="profile-box">
-    <img src="images/myface.JPEG" alt="My Photo" class="profile-photo" />
-</div>
-
-<h1>Vicente Amado Olivo</h1>
-
+    <!-- Full-width MSU green banner with profile picture -->
+    <h1>Vicente Amado Olivo</h1>
 
     <!-- Tab Navigation -->
     <div class="tab">
@@ -126,6 +21,9 @@
     <!-- Tab Content -->
     <div id="about" class="tab-content show">
         <h1>About Me</h1>
+
+        <!-- Wrapped Image -->
+        <img src="images/myface.JPEG" alt="My Photo" class="profile-image" />
         <p>I'm a PhD candidate at Michigan State University in the Computational Mathematics, Science, and Engineering Department, specializing in computational metascience. My research focuses on developing AI methods to connect global researchers through a comprehensive network, aiming to unify the worldwide research enterprise.</p>
 
         <h2>Research Projects</h2>
