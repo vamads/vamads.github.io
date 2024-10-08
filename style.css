@@ -100,7 +100,7 @@ h1, h2, p {
 .gallery-item img {
     width: 50%; /* Make the image fill the container */
     height: auto; /* Make the image fill the container */
-    object-fit: cover; /* Ensures the image scales properly and maintains aspect ratio */
+    object-fit: contain; /* Ensures the image scales properly and maintains aspect ratio */
     border: 2px solid #ccc; /* Border styling */
     border-radius: 5px; /* Rounded corners */
 }
