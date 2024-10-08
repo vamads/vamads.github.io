@@ -122,12 +122,12 @@ h1, h2, p {
 /* Video container to ensure it's responsive and properly sized */
 .video-container {
     max-width: 200px; /* Set a maximum width for the video */
-    width: 25%; /* Make sure it scales with the container */
+    width: 50%; /* Make sure it scales with the container */
     margin: 10px auto; /* Center the video container */
 }
 
 .hobby-video {
-    width: 25%; /* Ensure the video takes up the full width of its container */
+    width: 50%; /* Ensure the video takes up the full width of its container */
     height: auto; /* Maintain aspect ratio */
     border: 2px solid #18453B; /* Optional: Add a border to match the theme */
     border-radius: 5px; /* Optional: Rounded corners */
