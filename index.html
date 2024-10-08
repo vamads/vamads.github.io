@@ -189,109 +189,83 @@
     </div>
 
     <script>
-    <script>
-        function openTab(event, tabName) {
-            var i, tabcontent, tablinks;
+    function openTab(event, tabName) {
+        var i, tabcontent, tablinks;
 
-            // Hide all tab content
-            tabcontent = document.getElementsByClassName("tab-content");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Remove active-tab class from all tab buttons
-            tablinks = document.getElementsByClassName("tab-button");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].classList.remove("active-tab");
-            }
-
-            // Show the selected tab and add active class
-            document.getElementById(tabName).style.display = "block";
-            event.currentTarget.classList.add("active-tab");
-
-            // Load external HTML for the research tab
-            if (tabName === 'research') {
-                loadResearchArticles();
-                showSlide(0); // Show the first slide of the carousel when the tab is opened
-            }
+        // Hide all tab content
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
         }
 
-        // Function to load external research articles
-        function loadResearchArticles() {
-            const researchContent = document.getElementById('research-content');
-            researchContent.innerHTML = ''; // Clear previous content
-
-            // List of external research article files
-            const articles = ['research1.html', 'research2.html', 'research3.html']; // Add more articles as needed
-
-            // Load each article and append it to the research content div
-            articles.forEach(function (article) {
-                fetch(article)
-                    .then(response => response.text())
-                    .then(data => {
-                        const articleDiv = document.createElement('div');
-                        articleDiv.innerHTML = data;
-                        researchContent.appendChild(articleDiv);
-                    })
-                    .catch(error => console.error('Error loading research article:', error));
-            });
-
-            // Populate the gallery with images
-            const galleryDiv = document.getElementById('gallery');
-            const imageFolder = 'images/gallery/';
-            const images = [
-                'Comprehensive_Examination_I_became_A_PhD_Candidate.JPG',
-                'Presented_my_poster_on_author_name_disambiguation_algorithm_using_a_similarity_learning_framework_at_the_2024_International_Conference_on_the_Science_of_Science_and_Innovation.HEIC',
-                'test2.heic',
-                'conference2.jpg',
-                'conference3.jpg',
-                'conference4.jpg'
-            ]; // Add your image file names here
-
-            images.forEach((image, index) => {
-                const galleryItem = document.createElement('div');
-                galleryItem.classList.add('gallery-item');
-
-                const img = document.createElement('img');
-                img.src = imageFolder + image;
-                img.alt = 'Research Image ' + (index + 1);
-                img.onclick = function () { showSlide(index); }; // Show the clicked image in the carousel
-
-                galleryItem.appendChild(img);
-                galleryDiv.appendChild(galleryItem);
-            });
+        // Remove active-tab class from all tab buttons
+        tablinks = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-tab");
         }
 
-        // Carousel functionality
-        let currentSlideIndex = 0;
-        const images = [
-            'images/gallery/Comprehensive_Examination_I_became_A_PhD_Candidate.JPG',
-            'images/gallery/Presented_my_poster_on_author_name_disambiguation_algorithm_using_a_similarity_learning_framework_at_the_2024_International_Conference_on_the_Science_of_Science_and_Innovation.HEIC',
-            'images/gallery/test2.heic',
-            'images/gallery/conference2.jpg',
-            'images/gallery/conference3.jpg',
-            'images/gallery/conference4.jpg'
-        ];
+        // Show the selected tab and add active class
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.classList.add("active-tab");
 
-        function showSlide(index) {
-            if (index >= images.length) {
-                currentSlideIndex = 0; // Loop back to the first slide
-            } else if (index < 0) {
-                currentSlideIndex = images.length - 1; // Loop to the last slide
-            } else {
-                currentSlideIndex = index;
-            }
+        // Load external HTML for the research tab
+        if (tabName === 'research') {
+            loadResearchArticles();
+            showSlide(0); // Show the first slide of the carousel when the tab is opened
+        }
+    }
 
-            const carouselImg = document.getElementById('carousel-img');
-            const caption = document.getElementById('carousel-caption');
-            carouselImg.src = images[currentSlideIndex];
-            caption.innerText = `Research Image ${currentSlideIndex + 1} of ${images.length}`;
+    // Function to load external research articles
+    function loadResearchArticles() {
+        const researchContent = document.getElementById('research-content');
+        researchContent.innerHTML = ''; // Clear previous content
+
+        // List of external research article files
+        const articles = ['research1.html', 'research2.html', 'research3.html']; // Add more articles as needed
+
+        // Load each article and append it to the research content div
+        articles.forEach(function (article) {
+            fetch(article)
+                .then(response => response.text())
+                .then(data => {
+                    const articleDiv = document.createElement('div');
+                    articleDiv.innerHTML = data;
+                    researchContent.appendChild(articleDiv);
+                })
+                .catch(error => console.error('Error loading research article:', error));
+        });
+    }
+
+    // Carousel functionality
+    let currentSlideIndex = 0;
+    const images = [
+        'images/gallery/Comprehensive_Examination_I_became_A_PhD_Candidate.JPG',
+        'images/gallery/Presented_my_poster_on_author_name_disambiguation_algorithm_using_a_similarity_learning_framework_at_the_2024_International_Conference_on_the_Science_of_Science_and_Innovation.HEIC',
+        'images/gallery/test2.heic',
+        'images/gallery/conference2.jpg',
+        'images/gallery/conference3.jpg',
+        'images/gallery/conference4.jpg'
+    ];
+
+    function showSlide(index) {
+        if (index >= images.length) {
+            currentSlideIndex = 0; // Loop back to the first slide
+        } else if (index < 0) {
+            currentSlideIndex = images.length - 1; // Loop to the last slide
+        } else {
+            currentSlideIndex = index;
         }
 
-        function changeSlide(direction) {
-            showSlide(currentSlideIndex + direction);
-        }
-    </script>
+        const carouselImg = document.getElementById('carousel-img');
+        const caption = document.getElementById('carousel-caption');
+        carouselImg.src = images[currentSlideIndex];
+        caption.innerText = `Research Image ${currentSlideIndex + 1} of ${images.length}`;
+    }
+
+    function changeSlide(direction) {
+        showSlide(currentSlideIndex + direction);
+    }
+</script>
 
 </body>
 </html>
