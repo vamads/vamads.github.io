@@ -96,13 +96,10 @@
             <a class="next" onclick="changeSlide(1)">&#10095;</a>
         </div>
     
-    
         <div id="research-content">
             <!-- Research articles will be loaded here -->
         </div>
-
     </div>
-
 
     <!-- JavaScript -->
     <script>
@@ -155,36 +152,37 @@
             }
         ];
 
+        let currentSlideIndex = 0;
+
         // Function to create gallery dynamically
         function createGallery() {
-            const galleryDiv = document.getElementById('gallery');
+            // Load the first image when the page is opened
+            showSlide(currentSlideIndex);
+        }
 
-            // Clear the gallery before adding new items
-            galleryDiv.innerHTML = '';
+        function changeSlide(n) {
+            // Calculate the new index based on the current index
+            currentSlideIndex += n;
 
-            // Loop over the galleryImages array and create each image with a caption
-            galleryImages.forEach(image => {
-                // Create a div for each image and caption
-                const galleryItem = document.createElement('div');
-                galleryItem.classList.add('gallery-item');
+            // Wrap around if the index goes out of bounds
+            if (currentSlideIndex >= galleryImages.length) {
+                currentSlideIndex = 0;
+            } else if (currentSlideIndex < 0) {
+                currentSlideIndex = galleryImages.length - 1;
+            }
 
-                // Create the image element
-                const img = document.createElement('img');
-                img.src = image.src;
-                img.alt = image.alt;
+            // Show the updated slide
+            showSlide(currentSlideIndex);
+        }
 
-                // Create the caption element
-                const caption = document.createElement('div');
-                caption.classList.add('caption');
-                caption.innerText = image.caption;
+        function showSlide(index) {
+            const carouselImage = document.getElementById("carousel-img");
+            const carouselCaption = document.getElementById("carousel-caption");
 
-                // Append image and caption to the galleryItem div
-                galleryItem.appendChild(img);
-                galleryItem.appendChild(caption);
-
-                // Append galleryItem to the galleryDiv
-                galleryDiv.appendChild(galleryItem);
-            });
+            // Update image source and caption
+            carouselImage.src = galleryImages[index].src;
+            carouselImage.alt = galleryImages[index].alt;
+            carouselCaption.innerText = galleryImages[index].caption;
         }
     </script>
 </body>
