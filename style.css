@@ -93,13 +93,13 @@ h1, h2, p {
 .gallery-item {
     margin: 10px;
     text-align: center;
-    width: 200px; /* Set a fixed width for consistency */
-    height: 200px; /* Set a fixed height for consistency */
+    width: 150px; /* Set a fixed width for consistency */
+    height: autho; /* Set a fixed height for consistency */
 }
 
 .gallery-item img {
-    width: 100%; /* Make the image fill the container */
-    height: 100%; /* Make the image fill the container */
+    width: 50%; /* Make the image fill the container */
+    height: autho; /* Make the image fill the container */
     object-fit: cover; /* Ensures the image scales properly and maintains aspect ratio */
     border: 2px solid #ccc; /* Border styling */
     border-radius: 5px; /* Rounded corners */
@@ -121,13 +121,13 @@ h1, h2, p {
 
 /* Video container to ensure it's responsive and properly sized */
 .video-container {
-    max-width: 600px; /* Set a maximum width for the video */
-    width: 100%; /* Make sure it scales with the container */
+    max-width: 200px; /* Set a maximum width for the video */
+    width: 25%; /* Make sure it scales with the container */
     margin: 10px auto; /* Center the video container */
 }
 
 .hobby-video {
-    width: 100%; /* Ensure the video takes up the full width of its container */
+    width: 25%; /* Ensure the video takes up the full width of its container */
     height: auto; /* Maintain aspect ratio */
     border: 2px solid #18453B; /* Optional: Add a border to match the theme */
     border-radius: 5px; /* Optional: Rounded corners */
