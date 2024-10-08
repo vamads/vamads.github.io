@@ -49,7 +49,6 @@ body {
     margin: 10px 20px 10px 0;
     width: 150px; /* Reduced size for a more balanced layout */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 50%; /* Circular image */
 }
 
 h1, h2 {
@@ -77,8 +76,8 @@ h1, h2 {
 /* Styles for the gallery */
 .gallery {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: wrap; /* Allows items to wrap to the next line */
+    justify-content: center; /* Center-aligns the items */
     margin-top: 20px;
 }
 
@@ -88,10 +87,11 @@ h1, h2 {
 }
 
 .gallery-item img {
-    width: 200px;
-    height: auto;
-    border: 2px solid #ccc;
-    border-radius: 5px;
+    max-width: 200px; /* Limits width for responsiveness */
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    border: 2px solid #ccc; /* Border styling */
+    border-radius: 5px; /* Rounded corners */
 }
 
 .caption {
@@ -99,3 +99,4 @@ h1, h2 {
     font-size: 14px;
     color: #555;
 }
+
