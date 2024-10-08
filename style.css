@@ -49,6 +49,7 @@ body {
     margin: 10px 20px 10px 0;
     width: 150px; /* Reduced size for a more balanced layout */
     height: auto; /* Maintain aspect ratio */
+    border-radius: 0; /* Change to 0 to make it a rectangle */
 }
 
 h1, h2 {
