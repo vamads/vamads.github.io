@@ -48,7 +48,8 @@ body {
     float: left;
     margin: 10px 20px 10px 0;
     width: 150px; /* Reduced size for a more balanced layout */
-    border-radius: 50%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Circular image */
 }
 
 h1, h2 {
