@@ -43,13 +43,19 @@ body {
     display: block;
 }
 
-/* Image styles for wrapping */
+.profile-image-container {
+    display: inline-block; /* Makes the container fit the image */
+    background-color: #18453B; /* MSU green background */
+    padding: 5px; /* Space around the image */
+    border-radius: 5px; /* Optional: rounded corners for the container */
+}
+
 .profile-image {
-    float: left;
+    float: left; /* This can be kept or removed based on your layout */
     margin: 10px 20px 10px 0;
-    width: 150px; /* Reduced size for a more balanced layout */
+    width: 150px; /* Size of the profile image */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 0; /* Change to 0 to make it a rectangle */
+    border-radius: 0; /* Rectangle */
 }
 
 h1, h2 {
