@@ -1,117 +1,89 @@
-/* Set the background to white and text to black */
+/* Basic styles for the layout */
 body {
     font-family: Arial, sans-serif;
-    background-color: white; /* White background */
-    color: black; /* Black text */
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
 
-.profile-box {
-    float: left; /* This will make the box float to the left of the text */
-    border: 3px solid #18453B; /* MSU green border */
-    padding: 10px; /* Add some padding inside the box */
-    margin-right: 20px; /* Add space between the box and the text */
-    background-color: white; /* Optional: Add a background color */
+.banner {
+    background-color: #18453B; /* MSU green */
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-.profile-photo {
-    width: 150px; /* Adjust the image size */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Ensure the image takes full width of its container */
-}
-
-h1, p {
-    text-align: left;
-}
-
-/* Make the profile picture larger */
-.photo {
-    border-radius: 0; /* Remove the border-radius to make it square */
-    border: 5px solid white; /* White border around the image */
-    width: 100%; /* The image will scale to the width of its container */
-    max-width: 600px; /* Limit the image's maximum size to 600px */
-    height: auto; /* Maintain the aspect ratio */
-}
-}
-
-/* Headings with MSU green */
-h1, h2 {
-    color: #18453B; /* MSU Green */
-}
-
-/* Tab buttons */
 .tab {
     display: flex;
+    justify-content: center;
+    background-color: #f1f1f1;
+}
+
+.tab-button {
+    padding: 14px 20px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s;
+}
+
+.tab-button:hover {
+    background-color: #ddd;
+}
+
+.active-tab {
+    background-color: #ccc;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+}
+
+.tab-content.show {
+    display: block;
+}
+
+/* Image styles for wrapping */
+.profile-image {
+    float: left;
+    margin: 10px 20px 10px 0;
+    width: 200px; /* Adjust size as needed */
+    border-radius: 50%;
+}
+
+h1, h2 {
+    clear: both; /* Ensure headings don't overlap the image */
+}
+
+.caption {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 24px;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 3px;
+}
+
+/* Styles for the gallery */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     margin-top: 20px;
 }
 
-.tab-button {
-    padding: 15px;
-    cursor: pointer;
-    background-color: #f1f1f1; /* Light background for inactive tabs */
-    border: 1px solid #ccc;
-    flex: 1;
-    text-align: center;
-    color: black; /* Black text */
-    max-width: 150px; /* Limit tab width */
-}
-
-/* Active tab with MSU green background */
-.active-tab {
-    background-color: #18453B; /* MSU Green for active tab */
-    color: white; /* White text on active tab */
-}
-
-/* Tab content */
-.tab-content {
-    background-color: white;
-    color: black;
-    padding: 20px;
-    border: 1px solid #ccc;
-    display: none; /* Hide by default */
-}
-
-/* Show class to display the active tab */
-.tab-content.show {
-    display: block; /* Only display the selected tab */
-}
-
-.hobby-photo {
-    margin: 20px 0;
-    text-align: center;
-}
-
-.hobby-image {
-    width: 45%; /* Set the width of the images */
-    margin: 10px; /* Add space between images */
-    max-width: 300px; /* Limit maximum size */
-    height: auto;
-}
-
-.hobby-video {
-    width: 100%; /* Full width for video */
-    max-width: 600px; /* Limit maximum size */
-    height: auto; /* Maintain aspect ratio */
-    border: 1px solid #ccc; /* Optional: Add a border around the video */
-    border-radius: 5px; /* Optional: Round the corners of the video */
-}
-
-/* Gallery Section */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 20px;
-}
-
-
 .gallery-item {
-    display: inline-block;
     margin: 10px;
-    text-align: center; /* Center the caption */
+    text-align: center;
 }
 
 .gallery-item img {
@@ -126,11 +98,3 @@ h1, h2 {
     font-size: 14px;
     color: #555;
 }
-
-/* Adjust gallery layout for smaller screens */
-@media (max-width: 768px) {
-    .gallery-item {
-        width: 100%; /* Make the gallery items full width on smaller screens */
-    }
-}
-
