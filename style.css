@@ -107,22 +107,23 @@ h1, h2 {
     margin-bottom: 20px;
 }
 
+
 .gallery-item {
-    width: 48%; /* Adjust the width of each gallery item */
-    margin-bottom: 20px;
-    text-align: center;
+    display: inline-block;
+    margin: 10px;
+    text-align: center; /* Center the caption */
 }
 
-.gallery img {
-    width: 100%;
+.gallery-item img {
+    width: 200px;
     height: auto;
+    border: 2px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.gallery-caption {
-    margin-top: 8px;
-    font-size: 0.9em;
+.caption {
+    margin-top: 5px;
+    font-size: 14px;
     color: #555;
 }
 
