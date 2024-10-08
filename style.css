@@ -91,12 +91,14 @@ h1, h2 {
 .gallery-item {
     margin: 10px;
     text-align: center;
+    width: 200px; /* Set a fixed width for consistency */
+    height: 200px; /* Set a fixed height for consistency */
 }
 
 .gallery-item img {
-    max-width: 200px; /* Limits width for responsiveness */
-    width: 100%; /* Make the image responsive */
-    height: auto; /* Maintain aspect ratio */
+    width: 100%; /* Make the image fill the container */
+    height: 100%; /* Make the image fill the container */
+    object-fit: cover; /* Ensures the image scales properly and maintains aspect ratio */
     border: 2px solid #ccc; /* Border styling */
     border-radius: 5px; /* Rounded corners */
 }
