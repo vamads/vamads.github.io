@@ -117,13 +117,18 @@ h1, h2 {
     border-radius: 5px; /* Optional: rounded corners */
 }
 
-/* Video styles */
+
+Copy code
+/* Video container to ensure it's responsive and properly sized */
 .video-container {
-    max-width: 100%; /* Limit the video to the width of its container */
-    margin: 10px auto; /* Center the video */
+    max-width: 600px; /* Set a maximum width for the video */
+    width: 100%; /* Make sure it scales with the container */
+    margin: 10px auto; /* Center the video container */
 }
 
 .hobby-video {
-    width: 100%; /* Make the video responsive */
+    width: 100%; /* Ensure the video takes up the full width of its container */
     height: auto; /* Maintain aspect ratio */
+    border: 2px solid #18453B; /* Optional: Add a border to match the theme */
+    border-radius: 5px; /* Optional: Rounded corners */
 }
