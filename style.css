@@ -109,3 +109,13 @@ h1, h2 {
     border-radius: 5px; /* Optional: rounded corners */
 }
 
+/* Video styles */
+.video-container {
+    max-width: 100%; /* Limit the video to the width of its container */
+    margin: 10px auto; /* Center the video */
+}
+
+.hobby-video {
+    width: 100%; /* Make the video responsive */
+    height: auto; /* Maintain aspect ratio */
+}
