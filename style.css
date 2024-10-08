@@ -85,6 +85,10 @@ h1, h2 {
     border-radius: 3px;
 }
 
+.next {
+    float: right;
+}
+
 /* Styles for the gallery */
 .gallery {
     display: flex;
