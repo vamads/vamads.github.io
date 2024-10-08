@@ -52,6 +52,7 @@ body {
     width: 160px; /* Size of the container */
     height: auto; /* Adjust height to fit the image */
     justify-content: center;
+    display: flex:
     
 }
 
@@ -61,7 +62,7 @@ body {
     border-radius: 0; /* Rectangle shape */
 }
 
-h1, h2, p {
+h1, h2 {
     text-align: center;
     clear: none; /* Allow the text to wrap around the image */
 }
