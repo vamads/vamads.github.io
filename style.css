@@ -43,16 +43,15 @@ body {
     display: block;
 }
 
-/* Profile image container with a green background and centered image */
+/* Profile image container with a green background and wrapping text */
 .profile-image-container {
-    display: flex; /* Enable flexbox */
-    justify-content: center; /* Horizontally center the image */
-    align-items: center; /* Vertically center the image */
+    float: left; /* Float the container to the left */
     background-color: #18453B; /* MSU green background */
     padding: 5px; /* Space around the image */
     border-radius: 5px; /* Optional: rounded corners for the container */
-    width: 160px; /* Slightly larger to accommodate padding */
-    height: 160px; /* Ensure the container is square */
+    margin: 0 20px 10px 0; /* Adjust margins to control space around the image */
+    width: 160px; /* Size of the container */
+    height: auto; /* Adjust height to fit the image */
 }
 
 .profile-image {
@@ -61,8 +60,8 @@ body {
     border-radius: 0; /* Rectangle shape */
 }
 
-h1, h2 {
-    clear: both; /* Ensure headings don't overlap the image */
+h1, h2, p {
+    clear: none; /* Allow the text to wrap around the image */
 }
 
 .caption {
