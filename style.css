@@ -93,8 +93,8 @@ h1, h2, p {
 .gallery-item {
     margin: 10px;
     text-align: center;
-    width: 150px; /* Set a fixed width for consistency */
-    height: autho; /* Set a fixed height for consistency */
+    width: 50px; /* Set a fixed width for consistency */
+    height: auto; /* Set a fixed height for consistency */
 }
 
 .gallery-item img {
