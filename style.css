@@ -136,11 +136,6 @@ h1, h2, p {
     margin: 0 auto;    /* Centers the content */
     padding: 20px;     /* Adds padding to the container */
 }
-.carousel-container {
-    max-width: 600px;  /* Set a maximum width for the carousel */
-    margin: 0 auto;    /* Center the carousel horizontally */
-    overflow: hidden;   /* Hide overflow to prevent large images from spilling out */
-}
 
 /* Styles for the carousel images */
 .carousel-image {
