@@ -189,6 +189,7 @@
     </div>
 
     <script>
+    <script>
         function openTab(event, tabName) {
             var i, tabcontent, tablinks;
 
@@ -260,6 +261,17 @@
                 galleryDiv.appendChild(galleryItem);
             });
         }
+
+        // Carousel functionality
+        let currentSlideIndex = 0;
+        const images = [
+            'images/gallery/Comprehensive_Examination_I_became_A_PhD_Candidate.JPG',
+            'images/gallery/Presented_my_poster_on_author_name_disambiguation_algorithm_using_a_similarity_learning_framework_at_the_2024_International_Conference_on_the_Science_of_Science_and_Innovation.HEIC',
+            'images/gallery/test2.heic',
+            'images/gallery/conference2.jpg',
+            'images/gallery/conference3.jpg',
+            'images/gallery/conference4.jpg'
+        ];
 
         function showSlide(index) {
             if (index >= images.length) {
