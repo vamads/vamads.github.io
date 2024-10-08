@@ -43,19 +43,22 @@ body {
     display: block;
 }
 
+/* Profile image container with a green background and centered image */
 .profile-image-container {
-    display: inline-block; /* Makes the container fit the image */
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Horizontally center the image */
+    align-items: center; /* Vertically center the image */
     background-color: #18453B; /* MSU green background */
     padding: 5px; /* Space around the image */
     border-radius: 5px; /* Optional: rounded corners for the container */
+    width: 160px; /* Slightly larger to accommodate padding */
+    height: 160px; /* Ensure the container is square */
 }
 
 .profile-image {
-    float: left; /* This can be kept or removed based on your layout */
-    margin: 10px 20px 10px 0;
     width: 150px; /* Size of the profile image */
     height: auto; /* Maintain aspect ratio */
-    border-radius: 0; /* Rectangle */
+    border-radius: 0; /* Rectangle shape */
 }
 
 h1, h2 {
@@ -117,8 +120,6 @@ h1, h2 {
     border-radius: 5px; /* Optional: rounded corners */
 }
 
-
-Copy code
 /* Video container to ensure it's responsive and properly sized */
 .video-container {
     max-width: 600px; /* Set a maximum width for the video */
