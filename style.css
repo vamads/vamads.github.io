@@ -8,19 +8,23 @@ body {
     line-height: 1.6;
 }
 
-/* Michigan State University green banner */
-.banner {
-    width: 100%;
-    background-color: #18453B; /* MSU Green */
-    padding: 60px 0; /* Extra padding to make the banner bigger */
-    text-align: center;
+.banner-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left; /* Optional: Align text */
 }
 
-/* Center content within the banner */
-.banner-content {
-    width: 100%;
-    max-width: 1200px; /* Limit the width of the content */
-    margin: 0 auto; /* Center the content */
+.banner-content img {
+    float: left;
+    margin-right: 20px; /* Adjust spacing around the image */
+    width: 150px; /* Adjust image size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.banner-content h1 {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* Make the profile picture larger */
