@@ -120,7 +120,7 @@ h1, h2 {
     height: auto;     /* Allow height to be determined by content */
 }
 
-.caption {
+.gallery-caption {
     margin-top: 5px;
     font-size: 14px;
     color: #555;
