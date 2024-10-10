@@ -1,0 +1,12 @@
+[
+    {
+        "title": "Neural Author Name Disambiguator",
+        "description": "In this research project, we explore a new method for disambiguating author names utilizing a similarity learning framework. Author name disambiguation (AND) is crucial for accurately identifying unique authors in digital libraries, improving collaboration tools, and metascience studies. Using techniques such as deep learning, clustering, and natural language processing, we aim to reduce errors and enhance the overall performance of author identification. Preliminary results show a significant improvement in accuracy when compared to traditional methods.",
+        "image": {
+            "src": "images/Figure_AND.pdf",
+            "alt": "Research on AI for Name Disambiguation",
+            "caption": "Figure 1: The NAND."
+        }
+    }
+]
+

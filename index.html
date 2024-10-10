@@ -15,6 +15,7 @@
         <div class="tab-button active-tab" onclick="openTab(event, 'about')">About Me</div>
         <div class="tab-button" onclick="openTab(event, 'cv')">CV</div>
         <div class="tab-button" onclick="openTab(event, 'research')">Research</div>
+        <div class="tab-button" onclick="openTab(event, 'mentorship')">Mentorship</div> 
     </div>
 
     <!-- Tab Content -->
@@ -81,6 +82,9 @@
     <div id="cv" class="tab-content">
         <h2>Curriculum Vitae</h2>
         <p>You can download my CV <a href="documents/Vicente_Amado_Olivo_Resume.pdf" target="_blank">here</a>.</p>
+        
+        <!-- Embed the CV PDF in an iframe -->
+        <iframe src="documents/Vicente_Amado_Olivo_Resume.pdf" width="100%" height="600px"></iframe>
     </div>
 
     <div id="research" class="tab-content">
@@ -95,9 +99,33 @@
         </div>
     
         <div id="research-content">
-            <!-- Research articles will be loaded here -->
+            <h2>Research Articles</h2>
+            <div class="article-container" id="article-container">
+                <!-- Research articles will be loaded here -->
+            </div>
         </div>
     </div>
+    </div>
+
+    <div id="mentorship" class="tab-content">
+        <h2>Mentorship</h2>
+        <p>As a mentor, I aim to guide and support emerging researchers. Here are some of the areas I focus on:</p>
+        <ul>
+            <li>Data science and analysis techniques</li>
+            <li>Research design and methodology</li>
+            <li>Publication strategies and academic networking</li>
+        </ul>
+        
+        <h3>Current Mentees</h3>
+        <div class="mentee">
+            <h4>Mentee Name 1</h4>
+            <p>A brief description of the mentee's research interests or projects.</p>
+        </div>
+        <div class="mentee">
+            <h4>Mentee Name 2</h4>
+            <p>A brief description of the mentee's research interests or projects.</p>
+        </div>
+        <!-- Add more mentees as needed -->
     </div>
 
     <!-- JavaScript -->
@@ -188,6 +216,61 @@
             carouselImage.alt = galleryImages[index].alt;
             carouselCaption.innerText = galleryImages[index].caption;
         }
+
+        function loadArticles() {
+    fetch('research/AND_research.json')  // Adjust the path to where you save articles.json
+        .then(response => response.json())
+        .then(data => {
+            const articleContainer = document.getElementById('article-container');
+            articleContainer.innerHTML = '';  // Clear existing content
+
+            // Loop through each article and create HTML elements
+            data.forEach(article => {
+                const articleDiv = document.createElement('div');
+                articleDiv.classList.add('article');
+
+                // Set the inner HTML for the article
+                articleDiv.innerHTML = `
+                    <img src="${article.image}" alt="${article.title}" class="article-image">
+                    <h3>${article.title}</h3>
+                    <p>${article.description}</p>
+                    <a href="${article.link}" target="_blank">Read more</a>
+                `;
+                articleContainer.appendChild(articleDiv);  // Append to the container
+            });
+        })
+        .catch(error => {
+            console.error('Error loading articles:', error);
+        });
+}
+
+    // Call loadArticles when the Research tab is opened
+    function openTab(event, tabName) {
+        var i, tabcontent, tablinks;
+
+        // Hide all tab content
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+
+        // Remove active-tab class from all tab buttons
+        tablinks = document.getElementsByClassName("tab-button");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].classList.remove("active-tab");
+        }
+
+        // Show the selected tab and add active class
+        document.getElementById(tabName).style.display = "block";
+        event.currentTarget.classList.add("active-tab");
+
+        // Load articles when Research tab is opened
+        if (tabName === 'research') {
+            loadArticles();  // Call the function to load articles
+            createGallery();
+        }
+    }
+
     </script>
 </body>
 </html>

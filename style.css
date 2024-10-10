@@ -67,37 +67,28 @@ h1, h2 {
     clear: none; /* Allow the text to wrap around the image */
 }
 
-.caption {
-    text-align: center;
-    margin-top: 10px;
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 24px;
+    padding: 8px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 3px;
+    z-index: 10; /* Ensures buttons are on top of images */
 }
 
+/* Position the previous button on the left side */
 .prev {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: 24px;
-    padding: 8px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 3px;
-    float: left;
+    left: 10px;
 }
 
+/* Position the next button on the right side */
 .next {
-    float: right;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: white;
-    font-size: 24px;
-    padding: 8px;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    border-radius: 3px;
+    right: 10px;
 }
 
 /* Styles for the gallery */
@@ -168,4 +159,21 @@ h1, h2 {
     overflow: hidden;         /* Hide overflow to prevent large images from spilling out */
     position: relative;       /* Position for absolute positioning of controls */
     height: 400px;           /* Set a fixed height for the carousel */
+}
+
+.caption {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    color: #333;
+}
+
+#carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white; /* White text */
+    padding: 10px;
 }
