@@ -1,0 +1,12 @@
+{
+    "current_mentees": [
+      { "name": "Bea Lu", "project": "Metascience X Machine Learning in Astrophysics", "years": "2021-2024" },
+      { "name": "Benjamin Melon", "project": "Data Availability and Comparison: OpenAlex and NASA/ADS", "years": "2023-2024" }
+    ],
+    "past_mentees": [
+      { "name": "Gracie Tvrdik", "project": "Evolution of Research Collaboration In Physics", "years": "2024" },
+      { "name": "Richard 'Tripp' Dow", "project": "Coauthor-graph informed Author Name Disambiguation", "years": "2023" },
+      { "name": "Osiri Ekene", "project": "Local Food Production Prediciton for Food Waste Solutions", "years": "2021" },
+      { "name": "Kaitlyn Morgenstern", "project": "Local Food Production Prediciton for Food Waste Solutions", "years": "2021" }
+    ]
+  }

@@ -20,112 +20,122 @@
 
     <!-- Tab Content -->
     <div class="container">
-    <div id="about" class="tab-content show">
-        <h1>About Me</h1>
+        <div id="about" class="tab-content show">
+            <h1>About Me</h1>
 
-        <!-- Wrapped Image -->
-    <div class="profile-image-container">
-        <img src="images/myface.JPEG" class="profile-image" alt="Profile Image">
-    </div>
-        <p>I'm a PhD candidate at Michigan State University in the Computational Mathematics, Science, and Engineering Department, specializing in computational metascience. My research focuses on developing AI methods to connect global researchers through a comprehensive network, aiming to unify the worldwide research enterprise.</p>
+            <!-- Wrapped Image -->
+            <div class="profile-section">
+                <div class="profile-image-container">
+                    <img src="images/myface.JPEG" class="profile-image" alt="Profile Image">
+                </div>
+                <p>I'm a PhD candidate at Michigan State University in the Computational Mathematics, Science, and Engineering Department, specializing in computational metascience. My research focuses on developing AI methods to connect global researchers through a comprehensive network, aiming to unify the worldwide research enterprise.</p>
+            </div>
 
-        <h2>Research Projects</h2>
-        <p>I work on various projects in computational metascience, including:</p>
-        <ol>
-            <li>Author name disambiguation</li>
-            <li>Studying career trajectories of PhD graduates</li>
-            <li>Tracking facility usage through machine learning techniques</li>
-        </ol>
+            <h2>Research Projects</h2>
+            <p>I work on various projects in computational metascience, including:</p>
+            <ol>
+                <li>Author name disambiguation</li>
+                <li>Tracking facility usage through machine learning techniques</li>
+                <li>Studying career trajectories of PhD graduates</li>
+            </ol>
 
-        <h2>Research Interests</h2>
-        <p>My interests lie in understanding the collaboration dynamics of researchers across the world and identifying ways to assist researchers using data science. I believe that accurate disambiguation has far-reaching impacts:</p>
-        <ul>
-            <li>Facilitating collaborations</li>
-            <li>Identifying emerging experts for conferences</li>
-            <li>Connecting researchers from under-resourced areas</li>
-        </ul>
+            <h2>Research Interests</h2>
+            <p>My interests lie in understanding the collaboration dynamics of researchers across the world and identifying ways to assist researchers using data science. I believe that accurate disambiguation has far-reaching impacts:</p>
+            <ul>
+                <li>Facilitating collaborations</li>
+                <li>Identifying emerging experts for conferences</li>
+                <li>Connecting researchers from under-resourced areas</li>
+            </ul>
 
-        <p>Ultimately, my goal is to contribute to a more interconnected and equitable worldwide research ecosystem.</p>
+            <p>Ultimately, my goal is to contribute to a more interconnected and equitable worldwide research ecosystem.</p>
 
-        <h2>Life Beyond Research</h2>
-        <p>Outside of my research, I enjoy:</p>
+            <h2>Life Beyond Research</h2>
+            <p>Outside of my research, I enjoy:</p>
 
-        <!-- Sports Section -->
-        <h3>All things sports</h3>
-        <ul>
-            <li>Playing and watching soccer</li>
-            <li>Participating in fantasy football leagues</li>
-            <li>Running: I recently took up long-distance running and completed my first half marathon in 2024</li>
-        </ul>
+            <!-- Sports Section -->
+            <h3>All things sports</h3>
+            <ul>
+                <li>Playing and watching soccer</li>
+                <li>Participating in fantasy football leagues</li>
+                <li>Running: I recently took up long-distance running and completed my first half marathon in 2024</li>
+            </ul>
 
-         <!-- Add GIF or Video for Sports -->
-        <!-- Add GIF or Video for Sports -->
-        <div class="hobby-photo">
-            <div class="video-container">
-                <video class="hobby-video" controls>
-                    <source src="images/IMG_1403 2.MOV" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <div class="hobby-photo-container">
+                <div class="hobby-photo">
+                    <div class="video-container">
+                        <video class="hobby-video" controls>
+                            <source src="images/IMG_1403 2.MOV" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="hobby-photo">
+                    <img src="images/running.PNG" alt="Running" class="sports-image">
+                </div>
+            </div>
+            
+            
+
+            <!-- Culinary Section -->
+            <h3>Culinary Exploration</h3>
+            <p>I have a passion for cooking, particularly dishes from my diverse background that allow me to stay connected with my roots while exploring new flavors and techniques. Cooking is an important way I stay connected to my cultural heritage from Venezuela, Spain, and Italy.</p>
+            <!-- Add Photos for Culinary Exploration -->
+            <div class="hobby-photo">
+                <img src="images/cooking1.jpeg" alt="Cooking Dish 1" class="hobby-image">
+                <img src="images/cooking2.JPG" alt="Cooking Dish 2" class="hobby-image">
             </div>
         </div>
 
-        <!-- Culinary Section -->
-        <h3>Culinary Exploration</h3>
-        <p>I have a passion for cooking, particularly dishes from my diverse background and allows me to stay connected with my roots while exploring new flavors and techniques. Cooking is an important way I stay connected to my cultural heritage from Venezuela, Spain, and Italy.</p>
-        <!-- Add Photos for Culinary Exploration -->
-        <div class="hobby-photo">
-            <img src="images/cooking1.jpeg" alt="Cooking Dish 1" class="hobby-image">
-            <img src="images/cooking2.JPG" alt="Cooking Dish 2" class="hobby-image">
+        <div id="cv" class="tab-content">
+            <h2>Curriculum Vitae</h2>
+            <p>You can download my CV <a href="documents/Vicente_Amado_Olivo_Resume.pdf" target="_blank">here</a>.</p>
+            <!-- Embed the CV PDF in an iframe -->
+            <iframe src="documents/Vicente_Amado_Olivo_Resume.pdf" width="100%" height="600px"></iframe>
         </div>
-    </div>
 
-    <div id="cv" class="tab-content">
-        <h2>Curriculum Vitae</h2>
-        <p>You can download my CV <a href="documents/Vicente_Amado_Olivo_Resume.pdf" target="_blank">here</a>.</p>
+        <div id="research" class="tab-content">
+            <h2>My Research</h2>
+            <!-- Image Carousel for Research Photos -->
+            <div class="carousel-container">
+                <img id="carousel-img" class="carousel-image" src="" alt="Gallery Image">
+                <div class="caption" id="carousel-caption"></div>
+                <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+                <a class="next" onclick="changeSlide(1)">&#10095;</a>
+            </div>
         
-        <!-- Embed the CV PDF in an iframe -->
-        <iframe src="documents/Vicente_Amado_Olivo_Resume.pdf" width="100%" height="600px"></iframe>
-    </div>
-
-    <div id="research" class="tab-content">
-        <h2>My Research</h2>
-
-        <!-- Image Carousel for Research Photos -->
-        <div class="carousel-container">
-            <img id="carousel-img" class="carousel-image" src="" alt="Gallery Image">
-            <div class="caption" id="carousel-caption"></div>
-            <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
-            <a class="next" onclick="changeSlide(1)">&#10095;</a>
-        </div>
-    
-        <div id="research-content">
-            <h2>Research Articles</h2>
-            <div class="article-container" id="article-container">
-                <!-- Research articles will be loaded here -->
+            <div id="research-content">
+                <h2>Research Articles</h2>
+                <div class="article-container" id="article-container">
+                    <!-- Research articles will be loaded here -->
+                </div>
             </div>
         </div>
-    </div>
-    </div>
 
-    <div id="mentorship" class="tab-content">
-        <h2>Mentorship</h2>
-        <p>As a mentor, I aim to guide and support emerging researchers. Here are some of the areas I focus on:</p>
-        <ul>
-            <li>Data science and analysis techniques</li>
-            <li>Research design and methodology</li>
-            <li>Publication strategies and academic networking</li>
-        </ul>
-        
-        <h3>Current Mentees</h3>
-        <div class="mentee">
-            <h4>Mentee Name 1</h4>
-            <p>A brief description of the mentee's research interests or projects.</p>
+        <div id="mentorship" class="tab-content"> 
+            <h2>Mentorship</h2>
+            <p>As a mentor with extensive experience guiding emerging researchers, I am committed to fostering inclusive scientific communities. These experiences have deepened my commitment to equitable access in science and shaped my approach to mentorship.</p>
+
+            <h2>Focus Areas</h2>
+            
+            <p>I aim to guide and support emerging researchers in the following key areas:</p>
+            
+            <ol>
+                <li>Data Science and Scientific Literature Studies</li>
+                <li>Applied Natural Language Processing</li>
+                <li>Scientific Visualizations</li>
+                <li>Effective scientific communication and presentation skills</li>
+            </ol>
+            <p>By combining technical expertise with a commitment to diversity, I strive to create more equitable access to scientific opportunities and help mentees reach their full potential in their research careers.</p>
+            
+            <h3>Current Mentees</h3>
+            <div id="mentee-container">
+                <!-- Mentees will be loaded here -->
+            </div>
+            <h3>Past Mentees</h3>
+            <div id="past-mentee-container">
+                <!-- Past mentees will be loaded here -->
+            </div>
         </div>
-        <div class="mentee">
-            <h4>Mentee Name 2</h4>
-            <p>A brief description of the mentee's research interests or projects.</p>
-        </div>
-        <!-- Add more mentees as needed -->
     </div>
 
     <!-- JavaScript -->
@@ -149,9 +159,12 @@
             document.getElementById(tabName).style.display = "block";
             event.currentTarget.classList.add("active-tab");
 
-            // Load gallery when Research tab is opened
+            // Load content when specific tabs are opened
             if (tabName === 'research') {
+                loadArticles();
                 createGallery();
+            } else if (tabName === 'mentorship') {
+                loadMentees();
             }
         }
 
@@ -159,7 +172,7 @@
         const galleryImages = [
             {
                 src: "images/gallery/Comprehensive_Examination_I_became_A_PhD_Candidate.JPG",
-                caption: "Comprehensive Examination Presenation for PhD Candidacy.",
+                caption: "Comprehensive Examination Presentation for PhD Candidacy.",
                 alt: "Comprehensive Exam"
             },
             {
@@ -170,7 +183,7 @@
             {
                 src: "images/gallery/IMG_5515.jpg",
                 caption: "Presented my work in quantifying expertise for peer review using text embeddings at the NLP in space science workshop.",
-                alt: "Conference Presenation"
+                alt: "Conference Presentation"
             },
             {
                 src: "images/gallery/IMG_6668.JPG",
@@ -179,7 +192,7 @@
             },
             {
                 src: "images/gallery/IMG_3494.jpeg",
-                caption: "Gracie, my summer 2024 REU mentee presented her work at the Mid-Michigan Research Symposium.",
+                caption: "Gracie, my summer 2024 REU mentee, presented her work at the Mid-Michigan Research Symposium.",
                 alt: "2024 Mentee"
             }
         ];
@@ -214,64 +227,77 @@
             // Update image source and caption
             carouselImage.src = galleryImages[index].src;
             carouselImage.alt = galleryImages[index].alt;
-            carouselCaption.innerText = galleryImages[index].caption;
+            carouselCaption.innerHTML = galleryImages[index].caption;
         }
 
-        function loadArticles() {
-    fetch('research/AND_research.json')  // Adjust the path to where you save articles.json
-        .then(response => response.json())
-        .then(data => {
-            const articleContainer = document.getElementById('article-container');
-            articleContainer.innerHTML = '';  // Clear existing content
+                function loadArticles() {
+            fetch('research/AND_research.json')  // Adjust the path to your JSON file
+                .then(response => response.json())
+                .then(data => {
+                    const articleContainer = document.getElementById('article-container');
+                    articleContainer.innerHTML = '';  // Clear existing content
 
-            // Loop through each article and create HTML elements
-            data.forEach(article => {
-                const articleDiv = document.createElement('div');
-                articleDiv.classList.add('article');
+                    // Loop through each article and create HTML elements
+                    data.forEach(article => {
+                        const articleDiv = document.createElement('div');
+                        articleDiv.classList.add('article');
 
-                // Set the inner HTML for the article
-                articleDiv.innerHTML = `
-                    <img src="${article.image}" alt="${article.title}" class="article-image">
-                    <h3>${article.title}</h3>
-                    <p>${article.description}</p>
-                    <a href="${article.link}" target="_blank">Read more</a>
-                `;
-                articleContainer.appendChild(articleDiv);  // Append to the container
-            });
-        })
-        .catch(error => {
-            console.error('Error loading articles:', error);
+                        // Set the inner HTML for the article with the image below the title
+                        articleDiv.innerHTML = `
+                            <h3>${article.title}</h3>
+                            <img src="${article.image.src}" alt="${article.image.alt}" class="article-image">
+                            <p class="caption">${article.image.caption}</p>
+                            <p>${article.description}</p>
+                            <a href="${article.link}" target="_blank">Read more</a>
+                        `;
+                        articleContainer.appendChild(articleDiv);  // Append to the container
+                    });
+                })
+                .catch(error => {
+                    console.error('Error loading articles:', error);
+                });
+        }
+
+
+                    // Function to load mentees from a JSON file
+            function loadMentees() {
+                fetch('mentorship/mentorship.json')  // Adjust path as needed
+                    .then(response => response.json())
+                    .then(data => {
+                        const currentContainer = document.getElementById('mentee-container');
+                        const pastContainer = document.getElementById('past-mentee-container');
+
+                        // Clear any existing content
+                        currentContainer.innerHTML = '';
+                        pastContainer.innerHTML = '';
+
+                        // Loop through current mentees and display them
+                        data.current_mentees.forEach(mentee => {
+                            const menteeElement = document.createElement('div');
+                            menteeElement.className = 'mentee-item';
+                            menteeElement.innerHTML = `${mentee.name}: ${mentee.project} (${mentee.years})`;
+                            currentContainer.appendChild(menteeElement);
+                        });
+
+                        // Loop through past mentees and display them
+                        data.past_mentees.forEach(mentee => {
+                            const menteeElement = document.createElement('div');
+                            menteeElement.className = 'mentee-item';
+                            menteeElement.innerHTML = `${mentee.name}: ${mentee.project} (${mentee.years})`;
+                            pastContainer.appendChild(menteeElement);
+                        });
+                    })
+                    .catch(error => {
+                        console.error('Error loading mentees:', error);
+                    });
+            }
+
+        // Load the About tab by default
+        document.addEventListener('DOMContentLoaded', function() {
+            openTab(event, 'about');
         });
-}
-
-    // Call loadArticles when the Research tab is opened
-    function openTab(event, tabName) {
-        var i, tabcontent, tablinks;
-
-        // Hide all tab content
-        tabcontent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabcontent.length; i++) {
-            tabcontent[i].style.display = "none";
-        }
-
-        // Remove active-tab class from all tab buttons
-        tablinks = document.getElementsByClassName("tab-button");
-        for (i = 0; i < tablinks.length; i++) {
-            tablinks[i].classList.remove("active-tab");
-        }
-
-        // Show the selected tab and add active class
-        document.getElementById(tabName).style.display = "block";
-        event.currentTarget.classList.add("active-tab");
-
-        // Load articles when Research tab is opened
-        if (tabName === 'research') {
-            loadArticles();  // Call the function to load articles
-            createGallery();
-        }
-    }
-
     </script>
 </body>
 </html>
+
 
