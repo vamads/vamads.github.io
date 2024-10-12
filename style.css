@@ -201,15 +201,40 @@ h1, h2 {
     margin-bottom: 10px;
 }
 
+/* Full-width green background */
 .green-banner {
-    background-color: #18453b; /* MSU Green */
-    padding: 20px;
-    text-align: center;
+    background-color: #18453B; /* MSU green */
     color: white;
-    width: 100%; /* Full width */
+    text-align: center; /* Center align the content */
+    padding: 20px;
+    width: 100%;
 }
 
 .green-banner h1 {
-    margin: 0; /* Remove any default margin from the heading */
-    font-size: 2.5em; /* Adjust font size as needed */
+    margin: 0 0 20px 0; /* Space between name and contact info */
+}
+
+/* Make the links white */
+.green-banner a {
+    color: white; /* White links */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Add underline or different effect on hover */
+.green-banner a:hover {
+    text-decoration: underline;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+/* Add some space between icons and text */
+.contact-info i {
+    margin-right: 8px;
+}
+
+/* Icons */
+.fab {
+    font-size: 1.2em; /* Adjust size if needed */
 }
