@@ -11,6 +11,12 @@ body {
     padding: 20px;
 } 
 
+.top-section {
+    background-color: #18453B; /* MSU green */
+    padding: 20px;
+    color: white;
+}
+
 .tab {
     display: flex;
     justify-content: center;
@@ -49,7 +55,7 @@ body {
     padding: 5px; /* Space around the image */
     border-radius: 5px; /* Optional: rounded corners for the container */
     margin: 0 20px 10px 0; /* Adjust margins to control space around the image */
-    width: 160px; /* Size of the container */
+    width: 350px; /* Size of the container */
     height: auto; /* Adjust height to fit the image */
     justify-content: center;
     display: flex;
@@ -57,7 +63,7 @@ body {
 }
 
 .profile-image {
-    width: 150px; /* Size of the profile image */
+    width: 325px; /* Size of the profile image */
     height: auto; /* Maintain aspect ratio */
     border-radius: 0; /* Rectangle shape */
 }
@@ -195,3 +201,15 @@ h1, h2 {
     margin-bottom: 10px;
 }
 
+.green-banner {
+    background-color: #18453b; /* MSU Green */
+    padding: 20px;
+    text-align: center;
+    color: white;
+    width: 100%; /* Full width */
+}
+
+.green-banner h1 {
+    margin: 0; /* Remove any default margin from the heading */
+    font-size: 2.5em; /* Adjust font size as needed */
+}

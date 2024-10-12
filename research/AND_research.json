@@ -1,21 +1,24 @@
 [
     {
         "title": "Neural Author Name Disambiguator (NAND)",
-        "description": "In this research project, we explore a new method for disambiguating author names utilizing a similarity learning framework. Author name disambiguation (AND) is crucial for accurately identifying unique authors in digital libraries, improving collaboration tools, and furthering metascience studies. Using a similarity learning approach we founded the NAND model on learning to represent an authors publications closely together and other researchers further away. The NAND classifier learns the specific threshold neccesary for two author records to be labeled to the same researcher. Preliminary results show a significant improvement in accuracy when compared to traditional methods on a new dataset in Physics.",
+        "description": "In this research project, we explore a new method for disambiguating author names utilizing a similarity learning framework. Author name disambiguation (AND) is crucial for accurately identifying unique authors in digital libraries, improving collaboration tools, and furthering metascience studies. Using a similarity learning approach, we founded the NAND model on learning to represent an author's publications closely together and other researchers further away. Preliminary results show a significant improvement in accuracy when compared to traditional methods on a new dataset in Physics.",
         "image": {
             "src": "images/Figure_AND.jpg",
             "alt": "Research on AI for Name Disambiguation",
             "caption": "Figure 1: Pipeline for training and testing the NAND model."
-        }
+        },
+        "link": "https://example.com/NAND_paper.pdf"  
     },
     {
         "title": "A Machine Learning Framework for Institutional Research Management at Observatories",
         "description": "In this In this work, I present classification framework for tracking the usage of facilities in observatories. The astrophysics community describes the current use of resources (e.g. HST and JWST) in natural language scientific publications.  Our machine learning framework provides detailed usage information of shared community facilities from the large corpus of scientific literature. Our machine learning framework identifies facility usage with 93% accuracy and is currently being trialed at STScI to replace the manual system.",
         "image": {
             "src": "images/workflow_v2 (2).png",
-            "alt": "ML Tracking of facilities in Astronomy",
-            "caption": "Figure 2: Training workflow for classification framework for identifying publications containing usage pf MAST hosted missions."
-        }
+            "alt": "Institutional Research Management at Observatories",
+            "caption": "Figure 2: Framework for tracking facility usage."
+        },
+        "link": "https://example.com/Observatories_paper.pdf"  
     }
 ]
+
 
