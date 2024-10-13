@@ -1,20 +1,21 @@
 /* Basic styles for the layout */
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    font-family: 'Garamond', serif;
+    font-size: 18px; /* Base font size */
 }
 
-.banner {
-    background-color: #18453B; /* MSU green */
-    color: white;
-    padding: 20px;
-} 
+/* Green color for MSU */
+:root {
+    --msu-green: #18453B;
+}
 
-.top-section {
-    background-color: #18453B; /* MSU green */
-    padding: 20px;
+.banner,
+.top-section,
+.green-banner {
+    background-color: var(--msu-green); /* MSU green */
     color: white;
+    padding: 20px;
+    text-align: center; /* Center align the content */
 }
 
 .tab {
@@ -51,33 +52,47 @@ body {
 /* Profile image container with a green background and wrapping text */
 .profile-image-container {
     float: left; /* Float the container to the left */
-    background-color: #18453B; /* MSU green background */
+    background-color: var(--msu-green); /* MSU green background */
     padding: 5px; /* Space around the image */
     border-radius: 5px; /* Optional: rounded corners for the container */
     margin: 0 20px 10px 0; /* Adjust margins to control space around the image */
     width: 350px; /* Size of the container */
     height: auto; /* Adjust height to fit the image */
-    justify-content: center;
     display: flex;
+    justify-content: center;
+    position: absolute; /* Position it absolutely */
+    left: 15px; /* Adjust this value to move the image further to the left */
+    top: 400px; /* Adjust the vertical position */
     
+    /* Adjust these properties to change the green box size */
+    background-color: #18453B; /* Ensure background color is set */
+    border-radius: 10px; /* Optional: rounded corners */
+    width: auto; /* Let width adjust based on content (or set a specific width) */
+    height: auto; /* Let height adjust based on content */
+    /* You can also set a specific width and height if desired */
+    /* width: 450px; */
+    /* height: 450px; */
 }
 
 .profile-image {
-    width: 325px; /* Size of the profile image */
+    width: 425px; /* Size of the profile image */
     height: auto; /* Maintain aspect ratio */
     border-radius: 0; /* Rectangle shape */
 }
 
-.profile-section {
+.profile-section,
+.gallery {
     margin-bottom: 20px; /* Adjust as needed for spacing below the section */
 }
 
 h1, h2 {
-    text-align: center;
+    text-align: center; /* Ensures headings are centered */
     clear: none; /* Allow the text to wrap around the image */
 }
 
-.prev, .next {
+/* Navigation buttons */
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -91,14 +106,12 @@ h1, h2 {
     z-index: 10; /* Ensures buttons are on top of images */
 }
 
-/* Position the previous button on the left side */
 .prev {
-    left: 10px;
+    left: 10px; /* Position the previous button on the left side */
 }
 
-/* Position the next button on the right side */
 .next {
-    right: 10px;
+    right: 10px; /* Position the next button on the right side */
 }
 
 /* Styles for the gallery */
@@ -110,15 +123,15 @@ h1, h2 {
     padding: 10px;    /* Optional: add some padding around the gallery */
 }
 
+.gallery-item {
+    width: 150px;     /* Set a fixed width for consistency */
+    height: auto;     /* Allow height to be determined by content */
+}
+
 .gallery-item img {
     max-width: 100%;   /* Ensure the image does not exceed the container's width */
     height: auto;      /* Maintain aspect ratio */
     object-fit: cover; /* Ensures the image scales properly while maintaining aspect ratio */
-}
-
-.gallery-item {
-    width: 150px;     /* Set a fixed width for consistency */
-    height: auto;     /* Allow height to be determined by content */
 }
 
 .gallery-caption {
@@ -134,18 +147,13 @@ h1, h2 {
     margin-top: 20px; /* Adjust this to space the images from the previous section */
 }
 
-.hobby-photo {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Space between the images */
+.hobby-photo img, .hobby-photo video {
+    width: 100%;
+    height: auto;
 }
 
 .hobby-image {
     max-width: 45%; /* Adjust width to fit within the container */
-    height: auto;
-}
-.hobby-photo img, .hobby-photo video {
-    width: 100%;
     height: auto;
 }
 
@@ -154,6 +162,10 @@ h1, h2 {
     max-width: 800px; /* Optional: Limit max width */
     margin: 0 auto; /* Center the container */
     padding: 20px; /* Optional: Add padding */
+    display: flex;
+    justify-content: center; /* Centers the content horizontally */
+    align-items: flex-start; /* Aligns the content at the top */
+    gap: 40px; /* Space between the image and the text */
 }
 
 /* Styles for the carousel images */
@@ -194,22 +206,7 @@ h1, h2 {
     height: auto;
 }
 
-.caption {
-    font-style: italic;
-    text-align: center;
-    color: gray;
-    margin-bottom: 10px;
-}
-
 /* Full-width green background */
-.green-banner {
-    background-color: #18453B; /* MSU green */
-    color: white;
-    text-align: center; /* Center align the content */
-    padding: 20px;
-    width: 100%;
-}
-
 .green-banner h1 {
     margin: 0 0 20px 0; /* Space between name and contact info */
 }
@@ -238,3 +235,20 @@ h1, h2 {
 .fab {
     font-size: 1.2em; /* Adjust size if needed */
 }
+
+.iframe-container {
+    display: flex;
+    justify-content: center;  /* Center horizontally */
+    align-items: center;      /* Center vertically */
+    height: 1000px;            /* Match the height of the iframe or set your desired height */
+    width: 1000px; 
+    margin: 20px 0;          /* Add some space above and below */
+}
+
+iframe {
+    max-width: 200%;           /* Adjust max width as needed */
+    height: 100%;             /* Full height of the container */
+    border: none;             /* Optional: remove iframe border */
+}
+
+

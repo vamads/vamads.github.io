@@ -17,7 +17,6 @@
             <p>Group Website: <a href="https://kerzendorf-lab.github.io/" target="_blank">kerzendorf-lab.github.io</a></p>
         </div>
     </div>
-    
 
     <!-- Tab Navigation -->
     <div class="tab">
@@ -27,73 +26,70 @@
         <div class="tab-button" onclick="openTab(event, 'mentorship')">Mentorship</div> 
     </div>
 
-    <!-- Tab Content -->
     <div class="container">
-        <div id="about" class="tab-content show">
-            <h1>About Me</h1>
-
-            <!-- Wrapped Image -->
-            <div class="profile-section">
-                <div class="profile-image-container">
-                    <img src="images/myface.JPEG" class="profile-image" alt="Profile Image">
-                </div>
-                <p>I'm a PhD candidate at Michigan State University in the Computational Mathematics, Science, and Engineering Department, specializing in computational metascience. My research focuses on developing methods utilizing machine learning to connect global researchers, aiming to unify the worldwide research enterprise.</p>
+        <div id="about" class="tab-content">
+            <!-- Left-side Profile Image -->
+            <div class="profile-image-container">
+                <img src="images/myface.JPEG" class="profile-image" alt="Profile Image">
             </div>
-            
+        
+            <!-- Right-side Text Section -->
+            <div class="profile-text">
+                <h1>About Me</h1>
+                <p>I'm a PhD candidate at Michigan State University in the Computational Mathematics, Science, and Engineering Department, specializing in computational metascience. My research focuses on developing methods utilizing machine learning to connect global researchers, aiming to unify the worldwide research enterprise.</p>
+                
+                <h2>Research Projects</h2>
+                <p>Currently, I am working on various projects in computational metascience, including:</p>
+                <ol>
+                    <li>Author name disambiguation for the identification and collaboration of researchers</li>
+                    <li>Tracking facility usage through machine learning techniques for astronomical observatory research management</li>
+                    <li>Studying career trajectories of PhD graduates for tracking the impact of scientific training outside of Academia</li>
+                </ol>
 
-            <h2>Research Projects</h2>
-            <p>Currently, I am working on various projects in computational metascience, including:</p>
-            <ol>
-                <li>Author name disambiguation for the identification and collaboration of researchers</li>
-                <li>Tracking facility usage through machine learning techniques for astronomical observatory research management</li>
-                <li>Studying career trajectories of PhD graduates for tracking the impact of scientific training outside of Academia</li>
-            </ol>
+                <h2>Research Interests</h2>
+                <p>My future research interests lie in understanding the collaboration dynamics of researchers across the world and identifying ways to assist researchers utilizing advancements in data science. I believe that accurate disambiguation has far-reaching impacts:</p>
+                <ul>
+                    <li>Facilitating collaborations</li>
+                    <li>Matching experts for peer review</li>
+                    <li>Identifying emerging experts for conferences</li>
+                    <li>Connecting researchers from under-resourced areas</li>
+                </ul>
 
-            <h2>Research Interests</h2>
-            <p>My future researcg interests lie in understanding the collaboration dynamics of researchers across the world and identifying ways to assist researchers utilizing advancements in data science. I believe that accurate disambiguation has far-reaching impacts:</p>
-            <ul>
-                <li>Facilitating collaborations</li>
-                <li>Matching experts for peer review</li>
-                <li>Identifying emerging experts for conferences</li>
-                <li>Connecting researchers from under-resourced areas</li>
-            </ul>
+                <p>Ultimately, my goal is to contribute to a more interconnected and equitable worldwide research ecosystem.</p>
 
-            <p>Ultimately, my goal is to contribute to a more interconnected and equitable worldwide research ecosystem.</p>
+                <h2>Life Beyond Research</h2>
+                <p>Outside of my research, I enjoy:</p>
 
-            <h2>Life Beyond Research</h2>
-            <p>Outside of my research, I enjoy:</p>
+                <!-- Sports Section -->
+                <h3>All things sports</h3>
+                <ul>
+                    <li>Playing and watching soccer</li>
+                    <li>Participating in fantasy football leagues</li>
+                    <li>Running: I recently took up long-distance running and completed my first half marathon in 2024</li>
+                </ul>
 
-            <!-- Sports Section -->
-            <h3>All things sports</h3>
-            <ul>
-                <li>Playing and watching soccer</li>
-                <li>Participating in fantasy football leagues</li>
-                <li>Running: I recently took up long-distance running and completed my first half marathon in 2024</li>
-            </ul>
-
-            <div class="hobby-photo-container">
-                <div class="hobby-photo">
-                    <div class="video-container">
-                        <video class="hobby-video" controls>
-                            <source src="images/IMG_1403 2.MOV" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                <div class="hobby-photo-container">
+                    <div class="hobby-photo">
+                        <div class="video-container">
+                            <video class="hobby-video" controls>
+                                <source src="images/IMG_1403 2.MOV" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                    <div class="hobby-photo">
+                        <img src="images/running.PNG" alt="Running" class="sports-image">
                     </div>
                 </div>
+                
+                <!-- Culinary Section -->
+                <h3>Culinary Exploration</h3>
+                <p>I have a passion for cooking, particularly dishes from my diverse background that allow me to stay connected with my roots while exploring new flavors and techniques. Cooking is an important way I stay connected to my cultural heritage from Venezuela, Spain, and Italy.</p>
+                <!-- Add Photos for Culinary Exploration -->
                 <div class="hobby-photo">
-                    <img src="images/running.PNG" alt="Running" class="sports-image">
+                    <img src="images/cooking1.jpeg" alt="Cooking Dish 1" class="hobby-image">
+                    <img src="images/cooking2.JPG" alt="Cooking Dish 2" class="hobby-image">
                 </div>
-            </div>
-            
-            
-
-            <!-- Culinary Section -->
-            <h3>Culinary Exploration</h3>
-            <p>I have a passion for cooking, particularly dishes from my diverse background that allow me to stay connected with my roots while exploring new flavors and techniques. Cooking is an important way I stay connected to my cultural heritage from Venezuela, Spain, and Italy.</p>
-            <!-- Add Photos for Culinary Exploration -->
-            <div class="hobby-photo">
-                <img src="images/cooking1.jpeg" alt="Cooking Dish 1" class="hobby-image">
-                <img src="images/cooking2.JPG" alt="Cooking Dish 2" class="hobby-image">
             </div>
         </div>
 
@@ -101,7 +97,9 @@
             <h2>Curriculum Vitae</h2>
             <p>You can download my CV <a href="documents/Vicente_Amado_Olivo_Resume.pdf" target="_blank">here</a>.</p>
             <!-- Embed the CV PDF in an iframe -->
-            <iframe src="documents/Vicente_Amado_Olivo_Resume.pdf" width="100%" height="600px"></iframe>
+            <div class="iframe-container">
+                <iframe src="documents/Vicente_Amado_Olivo_Resume.pdf" width="100%" height="600px"></iframe>
+            </div>
         </div>
 
         <div id="research" class="tab-content">
@@ -148,6 +146,7 @@
             </div>
         </div>
     </div>
+    
 
     <!-- JavaScript -->
     <script>
@@ -270,38 +269,39 @@
         }
 
 
-                    // Function to load mentees from a JSON file
-            function loadMentees() {
-                fetch('mentorship/mentorship.json')  // Adjust path as needed
-                    .then(response => response.json())
-                    .then(data => {
-                        const currentContainer = document.getElementById('mentee-container');
-                        const pastContainer = document.getElementById('past-mentee-container');
+            // Function to load mentees from a JSON file
+function loadMentees() {
+    fetch('mentorship/mentorship.json')  // Adjust path as needed
+        .then(response => response.json())
+        .then(data => {
+            const currentContainer = document.getElementById('mentee-container');
+            const pastContainer = document.getElementById('past-mentee-container');
 
-                        // Clear any existing content
-                        currentContainer.innerHTML = '';
-                        pastContainer.innerHTML = '';
+            // Clear any existing content
+            currentContainer.innerHTML = '';
+            pastContainer.innerHTML = '';
 
-                        // Loop through current mentees and display them
-                        data.current_mentees.forEach(mentee => {
-                            const menteeElement = document.createElement('div');
-                            menteeElement.className = 'mentee-item';
-                            menteeElement.innerHTML = `${mentee.name}: ${mentee.project} (${mentee.years})`;
-                            currentContainer.appendChild(menteeElement);
-                        });
+            // Loop through current mentees and display them
+            data.current_mentees.forEach(mentee => {
+                const menteeElement = document.createElement('div');
+                menteeElement.className = 'mentee-item';
+                menteeElement.innerHTML = `${mentee.name}: ${mentee.project} (${mentee.years}) - ${mentee.affiliation}`;
+                currentContainer.appendChild(menteeElement);
+            });
 
-                        // Loop through past mentees and display them
-                        data.past_mentees.forEach(mentee => {
-                            const menteeElement = document.createElement('div');
-                            menteeElement.className = 'mentee-item';
-                            menteeElement.innerHTML = `${mentee.name}: ${mentee.project} (${mentee.years})`;
-                            pastContainer.appendChild(menteeElement);
-                        });
-                    })
-                    .catch(error => {
-                        console.error('Error loading mentees:', error);
-                    });
-            }
+            // Loop through past mentees and display them
+            data.past_mentees.forEach(mentee => {
+                const menteeElement = document.createElement('div');
+                menteeElement.className = 'mentee-item';
+                menteeElement.innerHTML = `${mentee.name}: ${mentee.project} (${mentee.years}) - ${mentee.affiliation}`;
+                pastContainer.appendChild(menteeElement);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading mentees:', error);
+        });
+}
+
 
         // Load the About tab by default
         document.addEventListener('DOMContentLoaded', function() {

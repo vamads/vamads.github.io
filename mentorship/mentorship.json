@@ -1,12 +1,14 @@
 {
     "current_mentees": [
-      { "name": "Bea Lu", "project": "Metascience X Machine Learning in Astrophysics", "years": "2021-2024" },
-      { "name": "Benjamin Melon", "project": "Data Availability and Comparison: OpenAlex and NASA/ADS", "years": "2023-2024" }
+      { "name": "Bea Lu", "project": "Metascience X Machine Learning in Astrophysics", "years": "2021-2024" , "affiliation": "Michigan State University"},
+      { "name": "Benjamin Melon", "project": "Data Availability and Comparison: OpenAlex and NASA/ADS", "years": "2023-2024", "affiliation": "Michigan State University" }
     ],
     "past_mentees": [
-      { "name": "Gracie Tvrdik", "project": "Evolution of Research Collaboration In Physics", "years": "2024" },
-      { "name": "Richard 'Tripp' Dow", "project": "Coauthor-graph informed Author Name Disambiguation", "years": "2023" },
-      { "name": "Osiri Ekene", "project": "Local Food Production Prediciton for Food Waste Solutions", "years": "2021" },
-      { "name": "Kaitlyn Morgenstern", "project": "Local Food Production Prediciton for Food Waste Solutions", "years": "2021" }
+      { "name": "Gracie Tvrdik", "project": "Evolution of Research Collaboration In Physics", "years": "2024", "affiliation": "Bowling Green State University" },
+      { "name": "Richard 'Tripp' Dow", "project": "Coauthor-graph informed Author Name Disambiguation", "years": "2023" , "affiliation": "University of Minnesota Twin Cities"},
+      { "name": "Aarya Chaumal", "project": "STARDIS Parallelization and GPU", "years": "2023" , "affiliation": "Google Summer of Code"},
+      { "name": "Owen Miller", "project": "Scientific Visualizations in Python", "years": "2022", "affiliation": "Michigan State University" },
+      { "name": "Osiri Ekene", "project": "Local Food Production Prediciton for Food Waste Solutions", "years": "2021", "affiliation": "Mid Michigan Community College"},
+      { "name": "Kaitlyn Morgenstern", "project": "Local Food Production Prediciton for Food Waste Solutions", "years": "2021", "affiliation": "Kalamazoo Valley Community College"}
     ]
   }
