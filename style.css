@@ -251,4 +251,63 @@ iframe {
     border: none;             /* Optional: remove iframe border */
 }
 
+/* Media queries for mobile devices */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Reduce font size on smaller screens */
+    }
+
+    .banner,
+    .top-section,
+    .green-banner {
+        padding: 10px; /* Reduce padding for smaller screens */
+    }
+
+    .tab {
+        flex-direction: column; /* Stack tabs vertically */
+    }
+
+    .profile-image-container {
+        float: none; /* Remove float on small screens */
+        position: relative; /* Reset the absolute positioning */
+        left: 0; /* Align to center */
+        top: 0;  /* Adjust top position */
+        width: 100%; /* Full width on mobile */
+        margin: 0 auto 10px; /* Center with margin */
+    }
+
+    .profile-image {
+        width: 100%; /* Full width for mobile */
+    }
+
+    .container {
+        flex-direction: column; /* Stack items vertically */
+        gap: 20px; /* Adjust gap for smaller screens */
+    }
+
+    .gallery-item {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .hobby-image {
+        max-width: 100%; /* Ensure images fit the screen */
+    }
+
+    .carousel-container {
+        max-width: 100%; /* Full width on mobile */
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    iframe {
+        width: 100%; /* Ensure iframe fits screen */
+        height: auto;
+    }
+
+    .iframe-container {
+        width: 100%; /* Full width on mobile */
+        height: auto; /* Adjust height based on content */
+    }
+}
+
+
 
