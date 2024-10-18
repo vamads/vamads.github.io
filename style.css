@@ -201,11 +201,6 @@ h1, h2 {
     padding: 10px;
 }
 
-.article-image {
-    max-width: 750px;
-    height: auto;
-}
-
 /* Full-width green background */
 .green-banner h1 {
     margin: 0 0 20px 0; /* Space between name and contact info */
@@ -250,6 +245,29 @@ iframe {
     height: 100%;             /* Full height of the container */
     border: none;             /* Optional: remove iframe border */
 }
+
+/* Article section styles */
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.article {
+    flex: 1 1 calc(100% - 50px);
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.article img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
 
 /* Media queries for mobile devices */
 @media (max-width: 768px) {

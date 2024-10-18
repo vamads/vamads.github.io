@@ -7,7 +7,8 @@
             "alt": "Research on AI for Name Disambiguation",
             "caption": "Figure 1: Pipeline for training and testing the NAND model."
         },
-        "link": "https://example.com/NAND_paper.pdf"  
+        "link": "https://drive.google.com/file/d/1hGNO--lBZ3JrCeDB9ceq_NZ8JELH6VbK/view?usp=sharing",
+        "status": "Amado Olivo et al. (in prep.)"  
     },
     {
         "title": "A Machine Learning Framework for Institutional Research Management at Observatories",
@@ -17,7 +18,8 @@
             "alt": "Institutional Research Management at Observatories",
             "caption": "Figure 2: Framework for tracking facility usage."
         },
-        "link": "https://example.com/Observatories_paper.pdf"  
+        "link": "https://example.com/Observatories_paper.pdf",
+        "status": "Amado Olivo et al. (Subm.)"  
     }
 ]
 

@@ -12,7 +12,7 @@
         <h1>Vicente Amado Olivo</h1>
         <div class="contact-info">
             <p>Email: <a href="mailto:amadovic@msu.edu">amadovic@msu.edu</a></p>
-            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/vicente-amado-olivo/" target="_blank">Vicente Amado Olivo</a></p>
+            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/vicente-amado-olivo/" target="_blank">Vicente Amado</a></p>
             <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/vamads" target="_blank">vamads</a></p>
             <p>Group Website: <a href="https://kerzendorf-lab.github.io/" target="_blank">kerzendorf-lab.github.io</a></p>
         </div>
@@ -240,33 +240,34 @@
             carouselCaption.innerHTML = galleryImages[index].caption;
         }
 
-                function loadArticles() {
-            fetch('research/AND_research.json')  // Adjust the path to your JSON file
-                .then(response => response.json())
-                .then(data => {
-                    const articleContainer = document.getElementById('article-container');
-                    articleContainer.innerHTML = '';  // Clear existing content
+        function loadArticles() {
+    fetch('research/AND_research.json')  
+        .then(response => response.json())
+        .then(data => {
+            const articleContainer = document.getElementById('article-container');
+            articleContainer.innerHTML = '';  // Clear existing content
 
-                    // Loop through each article and create HTML elements
-                    data.forEach(article => {
-                        const articleDiv = document.createElement('div');
-                        articleDiv.classList.add('article');
+            data.forEach(article => {
+                const articleDiv = document.createElement('div');
+                articleDiv.classList.add('article');
 
-                        // Set the inner HTML for the article with the image below the title
-                        articleDiv.innerHTML = `
-                            <h3>${article.title}</h3>
-                            <img src="${article.image.src}" alt="${article.image.alt}" class="article-image">
-                            <p class="caption">${article.image.caption}</p>
-                            <p>${article.description}</p>
-                            <a href="${article.link}" target="_blank">Read more</a>
-                        `;
-                        articleContainer.appendChild(articleDiv);  // Append to the container
-                    });
-                })
-                .catch(error => {
-                    console.error('Error loading articles:', error);
-                });
-        }
+                const statusText = article.status === "Amado Olivo et al. (in prep.)"  ? ' (in prep.)' : '';  // Add "(in prep.)" if needed
+
+                articleDiv.innerHTML = `
+                    <h3>${article.title}${statusText}</h3>
+                    <img src="${article.image.src}" alt="${article.image.alt}" class="article-image">
+                    <p class="caption">${article.image.caption}</p>
+                    <p>${article.description}</p>
+                    <a href="${article.link}" target="_blank">Read more</a>
+                `;
+                articleContainer.appendChild(articleDiv);
+            });
+        })
+        .catch(error => {
+            console.error('Error loading articles:', error);
+        });
+}
+
 
 
             // Function to load mentees from a JSON file
