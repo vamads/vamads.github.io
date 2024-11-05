@@ -49,35 +49,29 @@ body {
     display: block;
 }
 
-/* Profile image container with a green background and wrapping text */
 .profile-image-container {
-    float: left; /* Float the container to the left */
-    background-color: var(--msu-green); /* MSU green background */
-    padding: 5px; /* Space around the image */
-    border-radius: 5px; /* Optional: rounded corners for the container */
-    margin: 0 20px 10px 0; /* Adjust margins to control space around the image */
-    width: 350px; /* Size of the container */
-    height: auto; /* Adjust height to fit the image */
-    display: flex;
-    justify-content: center;
-    position: absolute; /* Position it absolutely */
-    left: 15px; /* Adjust this value to move the image further to the left */
-    top: 400px; /* Adjust the vertical position */
-    
-    /* Adjust these properties to change the green box size */
-    background-color: #18453B; /* Ensure background color is set */
-    border-radius: 10px; /* Optional: rounded corners */
-    width: auto; /* Let width adjust based on content (or set a specific width) */
-    height: auto; /* Let height adjust based on content */
-    /* You can also set a specific width and height if desired */
-    /* width: 450px; */
-    /* height: 450px; */
+    float: left;
+    background-color: var(--msu-green);
+    padding: 5px;
+    border-radius: 5px;
+    margin: 0 20px 10px 0;
+    max-width: 350px; /* Sets a max width to avoid overflow */
+    width: 100%; /* Allows scaling based on screen width */
+    position: relative;
 }
 
 .profile-image {
-    width: 425px; /* Size of the profile image */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 0; /* Rectangle shape */
+    width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .profile-image-container {
+        max-width: 60%; /* Adjust as needed for responsiveness */
+        float: none; /* Avoids text wrap issues on smaller screens */
+        position: static; /* Prevents overlap by removing absolute positioning */
+        margin: 0 auto; /* Centers on smaller screens if floated left */
+    }
 }
 
 .profile-section,
